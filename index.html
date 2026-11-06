@@ -3,14 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나의 첫 깃허브 웹사이트</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 100px; background-color: #f4f6f8; color: #333; }
-        h1 { color: #2ea44f; }
-    </style>
+    <title>과목별 빈칸 학습 프로그램</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>안녕하세요! 깃허브로 만든 웹사이트입니다. 🎉</h1>
-    <p>GitHub Pages를 통해 성공적으로 배포되었습니다.</p>
+<body class="bg-slate-50 text-slate-800 min-p flex flex-col min-h-screen">
+
+    <div class="max-w-2xl w-full mx-auto p-4 sm:p-6 my-auto">
+        
+        <!-- 1. 메인 화면 -->
+        <div id="setup-screen" class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 space-y-6">
+            <h1 class="text-2xl font-bold text-center text-indigo-600">📚 빈칸 척척 학습 프로그램</h1>
+            <p class="text-sm text-center text-slate-500">과목과 범위를 선택하고 학습을 시작하세요!</p>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold mb-1">과목 선택</label>
+                    <select id="subject-select" class="w-full p-3 border rounded-xl bg-slate-50 focus:ring-2 focus:ring-indigo-500 outline-none">
+                        <option value="성공적인_직업생활">성공적인 직업생활</option>
+                        <!-- 다른 과목 추가 시 여기에 <option value="과목ID">과목명</option> 추가 -->
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold mb-1">강 선택</label>
+                    <select id="lesson-select" class="w-full p-3 border rounded-xl bg-slate-50 focus:ring-2 focus:ring-indigo-500 outline-none">
+                        <option value="all">전체 (1~20강)</option>
+                        <!-- 1~20강 동적 생성 -->
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold mb-1">풀 문항 수</label>
+                    <select id="count-select" class="w-full p-3 border rounded-xl bg-slate-50 focus:ring-2 focus:ring-indigo-500 outline-none">
+                        <option value="10">10문항</option>
+                        <option value="20">20문항</option>
+                        <option value="30">30문항</option>
+                        <option value="50">50문항</option>
+                        <option value="all">전체 문항</option>
+                    </select>
+                </div>
+            </div>
+
+            <button onclick="startQuiz()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold p-3.5 rounded-xl transition shadow-lg shadow-indigo-100">
+                학습 시작하기 🚀
+            </button>
+        </div>
+
+        <!-- 2. 학습 화면 -->
+        <div id="quiz-screen" class="hidden bg-white rounded-2xl shadow-xl p-6 sm:p-8 space-y-6">
+            <div class="flex justify-between items-center text-sm font-medium text-slate-500 border-b pb-3">
+                <span id="progress-text">문제 1 / 10</span>
+                <span id="topic-badge" class="bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">단원명</span>
+            </div>
+
+            <div class="space-y-3">
+                <h2 id="question-text" class="text-lg sm:text-xl font-semibold leading-relaxed">
+                    문장 내용이 여기에 표시됩니다.
+                </h2>
+            </div>
+
+            <div class="space-y-3">
+                <input type="text" id="user-answer" placeholder="정답을 입력하세요" 
+                    class="w-full p-3.5 border-2 rounded-xl focus:border-indigo-500 outline-none text-lg"
+                    onkeypress="if(event.key === 'Enter') checkAnswer()">
+                
+                <div id="feedback-box" class="hidden p-4 rounded-xl text-sm space-y-2">
+                    <!-- 정답 여부 및 해설 표시 -->
+                </div>
+            </div>
+
+            <div class="flex gap-3 pt-2">
+                <button id="submit-btn" onclick="checkAnswer()" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold p-3.5 rounded-xl transition">
+                    확인
+                </button>
+                <button id="override-btn" onclick="markAsCorrect()" class="hidden bg-emerald-600 hover:bg-emerald-700 text-white font-bold p-3.5 rounded-xl transition">
+                    정답으로 처리하기 ✅
+                </button>
+                <button id="next-btn" onclick="nextQuestion()" class="hidden flex-1 bg-slate-800 hover:bg-slate-900 text-white font-bold p-3.5 rounded-xl transition">
+                    다음 문제 👉
+                </button>
+            </div>
+        </div>
+
+        <!-- 3. 결과 화면 -->
+        <div id="result-screen" class="hidden bg-white rounded-2xl shadow-xl p-6 sm:p-8 space-y-6">
+            <h2 class="text-2xl font-bold text-center text-indigo-600">🎉 학습 완료!</h2>
+            
+            <div class="bg-indigo-50 p-6 rounded-2xl text-center space-y-2">
+                <p class="text-sm text-slate-600">최종 정답률</p>
+                <p id="accuracy-rate" class="text-4xl font-extrabold text-indigo-600">0%</p>
+                <p id="score-summary" class="text-sm text-slate-500">맞은 개수: 0 / 전체: 0</p>
+            </div>
+
+            <div class="space-y-3">
+                <h3 class="font-bold text-slate-700">❌ 오답 문장 리스트</h3>
+                <div id="wrong-list" class="max-h-60 overflow-y-auto space-y-2 pr-1">
+                    <!-- 오답 목록 동적 생성 -->
+                </div>
+            </div>
+
+            <div class="flex gap-3">
+                <button onclick="copyWrongNotes()" class="flex-1 bg-amber-500 hover:bg-amber-600 text-white font-bold p-3.5 rounded-xl transition shadow-lg shadow-amber-100">
+                    오답노트에 추가하기 📋
+                </button>
+                <button onclick="resetQuiz()" class="flex-1 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold p-3.5 rounded-xl transition">
+                    처음으로  돌아가기 🏠
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 데이터 파일 불러오기 (data.js 분리 가능) -->
+    <script>
+        // 엑셀에서 변환한 데이터 구조 예시 (실제 전체 데이터는 data.js에 넣거나 아래에 추가)
+        const quizData = {
+            "성공적인_직업생활": [
+                { id: "SJ_001", lesson: "01강", topic: "직업의 성립 요건", question: "직업으로 인정받기 위해서는 일정한 대가를 받는 ______을 갖추어야 하며, 무급 봉사나 단순 취미 활동은 직업으로 분류되지 않는다.", answer: "경제성", explanation: "직업은 노동의 대가로 경제적 수입을 얻는 경제성을 지녀야 합니다." },
+                { id: "SJ_002", lesson: "01강", topic: "직업의 성립 요건", question: "직업은 일시적이거나 우연한 활동이 아니라 일정 기간 지속적으로 수행되는 ______을 충족해야 한다.", answer: "계속성", explanation: "직업은 매일, 계절적, 주기적으로 계속하여 행해지는 계속성을 지녀야 합니다." },
+                // ... 나머지 700제 데이터 삽입
+            ]
+        };
+
+        // 강 선택 옵션 동적 생성
+        const lessonSelect = document.getElementById('lesson-select');
+        for (let i = 1; i <= 20; i++) {
+            let opt = document.createElement('option');
+            let lessonStr = i < 10 ? `0${i}강` : `${i}강`;
+            opt.value = lessonStr;
+            opt.textContent = `${i}강`;
+            lessonSelect.appendChild(opt);
+        }
+
+        let currentQuestions = [];
+        let currentIndex = 0;
+        let score = 0;
+        let wrongAnswers = [];
+
+        function startQuiz() {
+            const subject = document.getElementById('subject-select').value;
+            const selectedLesson = document.getElementById('lesson-select').value;
+            const countOption = document.getElementById('count-select').value;
+
+            let pool = quizData[subject] || [];
+
+            // 강 필터링
+            if (selectedLesson !== 'all') {
+                pool = pool.filter(q => q.lesson === selectedLesson);
+            }
+
+            if (pool.length === 0) {
+                alert("해당 조건에 맞는 문제가 없습니다!");
+                return;
+            }
+
+            // 무작위 섞기
+            pool.sort(() => Math.random() - 0.5);
+
+            // 문항 수 자르기
+            if (countOption !== 'all') {
+                const limit = parseInt(countOption);
+                pool = pool.slice(0, limit);
+            }
+
+            currentQuestions = pool;
+            currentIndex = 0;
+            score = 0;
+            wrongAnswers = [];
+
+            document.getElementById('setup-screen').classList.add('hidden');
+            document.getElementById('quiz-screen').classList.remove('hidden');
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const q = currentQuestions[currentIndex];
+            document.getElementById('progress-text').textContent = `문제 ${currentIndex + 1} / ${currentQuestions.length}`;
+            document.getElementById('topic-badge').textContent = `${q.lesson} | ${q.topic}`;
+            document.getElementById('question-text').textContent = q.question;
+            document.getElementById('user-answer').value = '';
+            document.getElementById('user-answer').disabled = false;
+            
+            const feedbackBox = document.getElementById('feedback-box');
+            feedbackBox.classList.add('hidden');
+            feedbackBox.innerHTML = '';
+
+            document.getElementById('submit-btn').classList.remove('hidden');
+            document.getElementById('override-btn').classList.add('hidden');
+            document.getElementById('next-btn').classList.add('hidden');
+            document.getElementById('user-answer').focus();
+        }
+
+        function checkAnswer() {
+            const userAns = document.getElementById('user-answer').value.trim();
+            if (!userAns) {
+                alert("정답을 입력해주세요!");
+                return;
+            }
+
+            const q = currentQuestions[currentIndex];
+            const isCorrect = userAns === q.answer;
+
+            const feedbackBox = document.getElementById('feedback-box');
+            feedbackBox.classList.remove('hidden');
+            document.getElementById('user-answer').disabled = true;
+            document.getElementById('submit-btn').classList.add('hidden');
+
+            if (isCorrect) {
+                score++;
+                feedbackBox.className = "p-4 rounded-xl text-sm space-y-2 bg-emerald-50 text-emerald-800 border border-emerald-200";
+                feedbackBox.innerHTML = `<strong>정답입니다! 🎉</strong><br>💡 <strong>핵심 개념:</strong> ${q.explanation}`;
+                document.getElementById('next-btn').classList.remove('hidden');
+            } else {
+                wrongAnswers.push({ ...q, userAns });
+                feedbackBox.className = "p-4 rounded-xl text-sm space-y-2 bg-rose-50 text-rose-800 border border-rose-200";
+                feedbackBox.innerHTML = `<strong>오답입니다. 🥲</strong><br>내 정답: ${userAns} / 정답: <strong>${q.answer}</strong><br>💡 <strong>핵심 개념:</strong> ${q.explanation}`;
+                document.getElementById('override-btn').classList.remove('hidden');
+                document.getElementById('next-btn').classList.remove('hidden');
+            }
+        }
+
+        function markAsCorrect() {
+            // 오답 처리되었던 것을 정답으로 변경
+            score++;
+            wrongAnswers.pop(); // 방금 추가된 오답 제거
+
+            const feedbackBox = document.getElementById('feedback-box');
+            feedbackBox.className = "p-4 rounded-xl text-sm space-y-2 bg-emerald-50 text-emerald-800 border border-emerald-200";
+            feedbackBox.innerHTML += `<br><strong class='text-emerald-700'>✅ 사용자에 의해 정답으로 처리되었습니다.</strong>`;
+            
+            document.getElementById('override-btn').classList.add('hidden');
+        }
+
+        function nextQuestion() {
+            currentIndex++;
+            if (currentIndex < currentQuestions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quiz-screen').classList.add('hidden');
+            document.getElementById('result-screen').classList.remove('hidden');
+
+            const total = currentQuestions.length;
+            const rate = Math.round((score / total) * 100);
+
+            document.getElementById('accuracy-rate').textContent = `${rate}%`;
+            document.getElementById('score-summary').textContent = `맞은 개수: ${score} / 전체: ${total}`;
+
+            const wrongListDiv = document.getElementById('wrong-list');
+            wrongListDiv.innerHTML = '';
+
+            if (wrongAnswers.length === 0) {
+                wrongListDiv.innerHTML = `<p class='text-sm text-slate-400 text-center py-4'>틀린 문제가 없습니다! 완벽해요! 👏</p>`;
+            } else {
+                wrongAnswers.forEach((item, idx) => {
+                    let div = document.createElement('div');
+                    div.className = "p-3 bg-slate-50 rounded-xl border text-sm space-y-1";
+                    div.innerHTML = `
+                        <p class='font-semibold text-slate-700'>Q${idx+1}. ${item.question}</p>
+                        <p class='text-rose-600'>내 답: ${item.userAns} | <strong>정답: ${item.answer}</strong></p>
+                        <p class='text-xs text-slate-500'>💡 ${item.explanation}</p>
+                    `;
+                    wrongListDiv.appendChild(div);
+                });
+            }
+        }
+
+        function copyWrongNotes() {
+            if (wrongAnswers.length === 0) {
+                alert("복사할 오답이 없습니다!");
+                return;
+            }
+            let text = "[오답 노트]\n\n";
+            wrongAnswers.forEach((item, idx) => {
+                text += `${idx+1}. 문제: ${item.question}\n`;
+                text += `- 내 답: ${item.userAns} / 정답: ${item.answer}\n`;
+                text += `- 핵심 개념: ${item.explanation}\n\n`;
+            });
+            navigator.clipboard.writeText(text).then(() => {
+                alert("오답노트가 클립보드에 복사되었습니다! 메모장에 붙여넣어 보세요.");
+            });
+        }
+
+        function resetQuiz() {
+            document.getElementById('result-screen').classList.add('hidden');
+            document.getElementById('setup-screen').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
