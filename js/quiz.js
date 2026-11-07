@@ -11,6 +11,19 @@ const quizState = {
 
 const quizEl = {};
 
+const firebaseConfig = {
+    apiKey: "AIzaSyB3EmGIeyl1ZGedtWZQD1_srecLUg75Ps0",
+    authDomain: "successful-careerlife.firebaseapp.com",
+    projectId: "successful-careerlife",
+    storageBucket: "successful-careerlife.firebasestorage.app",
+    messagingSenderId: "401280076063",
+    appId: "1:401280076063:web:a8a3d6dc342aed59f3882a",
+    measurementId: "G-ZFZKEDYXYE"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
 /* ---------- 문제 뽑기 ---------- */
 
 /**
@@ -163,22 +176,43 @@ function showResult() {
     });
 }
 
-function copyWrongNotes() {
+// initQuiz() 함수 내부 또는 적절한 위치에 추가
+const saveBtn = document.getElementById("copy-btn"); // HTML 버튼 ID에 맞춰 수정하세요 (예: "save-wrong-btn" 등)
+if (saveBtn) {
+    saveBtn.textContent = "오답노트 클라우드 저장"; // 버튼 텍스트 변경 (선택사항)
+    saveBtn.removeEventListener("click", copyWrongNotes); // 기존 복사 기능이 있다면 제거
+    saveBtn.addEventListener("click", saveWrongNotesToFirebase);
+}
+
+async function saveWrongNotesToFirebase() {
     if (quizState.wrong.length === 0) {
-        alert("복사할 오답이 없습니다!");
+        alert("저장할 오답이 없습니다! 완벽해요! 👏");
         return;
     }
 
-    let text = "[오답 노트]\n\n";
-    quizState.wrong.forEach((item, idx) => {
-        text += `${idx + 1}. 문제: ${item.question}\n`;
-        text += `- 내 답: ${item.userAns} / 정답: ${item.answer}\n`;
-        text += `- 핵심 개념: ${item.explanation}\n\n`;
-    });
+    try {
+        const wrongNotesData = {
+            createdAt: new Date(), // 저장 시점 (서버 타임스탬프 또는 JS Date)
+            score: quizState.score,
+            total: quizState.questions.length,
+            wrongItems: quizState.wrong.map(item => ({
+                question: item.question,
+                userAns: item.userAns,
+                answer: item.answer,
+                explanation: item.explanation,
+                lesson: item.lesson || "",
+                topic: item.topic || ""
+            }))
+        };
 
-    navigator.clipboard.writeText(text)
-        .then(() => alert("오답노트가 클립보드에 복사되었습니다! 메모장에 붙여넣어 보세요."))
-        .catch(() => alert("복사에 실패했습니다. 브라우저의 클립보드 권한을 확인해주세요."));
+        // Firestore의 'wrong_notes' 컬렉션에 데이터 추가
+        await db.collection("wrong_notes").add(wrongNotesData);
+        
+        alert("오답노트가 파이어베이스 클라우드에 안전하게 저장되었습니다! ☁️");
+    } catch (error) {
+        console.error("오답노트 저장 실패:", error);
+        alert("오답노트 저장 중 오류가 발생했습니다. 콘솔을 확인해주세요.");
+    }
 }
 
 function resetQuiz() {
