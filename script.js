@@ -209,37 +209,30 @@ const lectureDatabase = {
         rows: [
           {
             category: "영아기 (0~2세)",
-            description: "신체 성장이 가장 빠르고 감각·운동을 통한 지능 발달",
             answers: ["대뇌·감각기관 발달", "젖 떼기·걸음마·말하기", "애착 형성"]
           },
           {
             category: "유아기 (2~6세)",
-            description: "자기중심적 언어 사용 및 어휘력 급증",
             answers: ["어휘력 급증 및 또래 놀이", "기본 생활 습관 형성"]
           },
           {
             category: "아동기 (6~12세)",
-            description: "운동 기능 정교화 및 자아 존중감·규범 형성",
             answers: ["학습 습관 형성", "도덕성의 기초 형성"]
           },
           {
             category: "청소년기 (12~20세)",
-            description: "성장 급등, 2차 성징 및 가설·연역적 사고",
             answers: ["급격한 신체 성장 및 성적 성숙", "자아 정체감 형성하기", "진로 탐색 및 성인 준비"]
           },
           {
             category: "성년기 (20~40세)",
-            description: "사회적 역할 수행 및 왕성한 직업 생활",
             answers: ["직업 선택 및 취업", "배우자 선택과 결혼", "직업 수행 지식·기술 습득"]
           },
           {
             category: "중년기 (40~65세)",
-            description: "생애 가장 생산적인 시기이자 직업적 안정",
             answers: ["신체적 노화 시작 및 갱년기", "인생 철학 확립하기", "직업 안정 및 직업 전환", "건강 약화 대비 심신 단련"]
           },
           {
             category: "노년기 (65세 이후)",
-            description: "신체 감각 및 기억 감퇴, 은퇴 후 삶의 적응",
             answers: ["체력 저하와 의존성 증가", "은퇴 적응하기", "배우자 사별 및 죽음 준비"]
           }
         ]
@@ -262,22 +255,18 @@ const lectureDatabase = {
         rows: [
           {
             category: "청소년기",
-            description: "진로 탐색 및 기초 역량 배양",
             answers: ["학업 성취감과 유능감 확장"]
           },
           {
             category: "성년기",
-            description: "직업 세계 입문 및 전문성 개발",
             answers: ["자신에게 맞는 직업 선택", "자신만의 전문 영역 확장", "원만한 대인 관계와 정보 교류"]
           },
           {
             category: "중년기",
-            description: "직업적 지위 확보 및 생산성 유지",
             answers: ["안정적인 직업 생활과 경제적 안정", "직장 생활 경력자로서 역할과 책임", "노후 대비 일과 취미 활동 탐색"]
           },
           {
             category: "노년기",
-            description: "사회 활동 재편 및 건강 관리",
             answers: ["은퇴 준비 및 은퇴 후 생활 적응", "자아 존중감 유지 및 여가 생활"]
           }
         ]
@@ -308,22 +297,18 @@ const lectureDatabase = {
         rows: [
           {
             category: "청소년기",
-            description: "성공의 기초 자질 함양 및 긍정적 태도",
             answers: ["직업적 성공의 의미 정립", "필요한 지식·기술·태도 준비", "어려운 상황에 대한 긍정적 인식"]
           },
           {
             category: "성년기",
-            description: "도전 정신, 전문성 구축 및 직업 윤리",
             answers: ["업무 수행 시 창의성과 도전 정신 발휘", "업무 전문성 강화와 꾸준한 자기 개발", "직업 윤리와 책임 의식 함양"]
           },
           {
             category: "중년기",
-            description: "지도력, 위기 대처 및 장인 정신",
             answers: ["경력을 바탕으로 한 지도력(리더십) 발휘", "다양한 경험을 바탕으로 한 위기 대처 능력", "지금까지 쌓은 기술에 대한 장인 정신과 소명 의식"]
           },
           {
             category: "노년기",
-            description: "재취업 교육, 관계 유지 및 여가 활용",
             answers: ["재취업 훈련 및 노인 교육 프로그램 참여", "건강한 인간관계 유지 및 여가 생활"]
           }
         ]
@@ -368,15 +353,15 @@ const lectureDatabase = {
         rows: [
           {
             category: "<input class='blank-input' data-ans='대기업'>",
-            content: "근거 법령은 <input class='blank-input' data-ans='공정거래법|독점규제 및 공정거래에 관한 법률'>임. 자산 총액 5조 원 이상인 <input class='blank-input' data-ans='공시대상기업집단|공시 대상 기업 집단'>과 자산 총액이 GDP의 0.5% 이상인 상호출자제한기업집단을 의미함."
+            content: "자산 총액 5조 원 이상인 <input class='blank-input' data-ans='공시대상기업집단|공시 대상 기업 집단'>과 자산 총액이 GDP의 0.5% 이상인 <input class='blank-input' data-ans='상호출자제한기업집단|상호 출자 제한 기업 집단'>을 의미함."
           },
           {
             category: "<input class='blank-input' data-ans='중견기업'>",
-            content: "근거 법령은 <input class='blank-input' data-ans='중견기업법|중견기업 성장 촉진 및 경쟁력 강화에 관한 특별법'>임. 중소기업 범위를 벗어나고 상호출자제한기업집단에 속하지 않는 기업으로, 업종 상관없이 자산 총액이 <input class='blank-input' data-ans='5000억|5,000억|5천억'>원 이상인 기업이 포함됨."
+            content: "중소기업 범위를 벗어나고 <input class='blank-input' data-ans='상호출자제한기업집단|상호 출자 제한 기업 집단'>에 속하지 않는 기업으로, 업종 상관없이 자산 총액이 <input class='blank-input' data-ans='5000억|5,000억|5천억'>원 이상인 기업이 포함됨."
           },
           {
             category: "<input class='blank-input' data-ans='중소기업'>",
-            content: "근거 법령은 <input class='blank-input' data-ans='중소기업기본법'>임. 업종별 평균 매출액이 400억~1,800억 원 이하이고 자산 총액이 <input class='blank-input' data-ans='5000억|5,000억|5천억'>원 미만인 기준을 충족해야 함."
+            content: "업종별 평균 매출액이 400억~1,800억 원 이하이고 자산 총액이 <input class='blank-input' data-ans='5000억|5,000억|5천억'>원 미만인 기준을 충족해야 함."
           }
         ]
       }
