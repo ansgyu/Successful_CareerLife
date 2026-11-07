@@ -108,7 +108,27 @@ const lectureDatabase = {
           {
             category: "<input class='blank-input' data-ans='사회적 인정|사회적인정'>",
             content: "다른 사람들과 사회로부터 일의 가치를 인정받는 것을 중시함."
-          }
+          },
+          {
+            category: "<input class='blank-input' data-ans='경제적보상|경제적 보상'>",
+            content: "일에 대한 정당한 대가로서의 보상을 중시함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='사회공헌|사회적공헌|사회적 공헌|사회 공헌'>",
+            content: "일을 통해 다른 사람이나 사회에 도움이 되는 것을 중시함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='직업안정|직업 안정'>",
+            content: "직업을 유지하면서 오랫동안 안정적으로 일할 수 있는지를 중시함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='자율|자율성'>",
+            content: "자율적으로 업무를 수행해 나가는 것을 중시함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='일과 삶의 균형|일과 삶의균형|일과삶의 균형|일과삶의균형'>",
+            content: "일뿐만 아니라 자신의 삶에서도 만족할 수 있도록 읽과 삶의 적절한 균형을 중시함."
+          },
         ]
       },
       {
@@ -142,7 +162,7 @@ const lectureDatabase = {
           },
           {
             category: "3개월 초과 6개월 이내 탄력근로제",
-            content: "<input class='blank-input' data-ans='근로자 대표|근로자대표'>와 <input class='blank-input' data-ans='서면 합의|서면합의'>하면 기간 동안 평균적으로 법정근로시간을 지키면서 특정 주에는 최대 52시간, 특정 날에는 최대 12시간까지 일할 수 있음."
+            content: "<input class='blank-input' data-ans='근로자 대표|근로자대표'>와 <input class='blank-input' data-ans='서면 합의|서면합의'>하면 기간 동안 평균적으로 법정근로시간을 지키면서 특정 주에는 최대 <input class='blank-input' data-ans='52'>시간, 특정 날에는 최대 <input class='blank-input' data-ans='12'>시간까지 일할 수 있음."
           },
           {
             category: "선택적 근로시간제",
@@ -150,7 +170,7 @@ const lectureDatabase = {
           },
           {
             category: "임금 보전과 적용 제외",
-            content: "3개월 이내의 탄력적 근로시간제는 임금 보전 방안을 강구해야 함. 3개월을 초과하는 탄력적 근로시간제는 <input class='blank-input' data-ans='고용노동부장관|고용노동부 장관|노동부 장관|노동부장관'>에게 임금 보전 방안을 신고해야 함. 단, 서면 합의하여 마련한 경우 의무 없음."
+            content: "3개월 이내의 탄력적 근로시간제는 임금 보전 방안을 강구해야 함. 3개월을 초과하는 탄력적 근로시간제는 <input class='blank-input' data-ans='고용노동부장관|고용노동부 장관|노동부 장관|노동부장관'>에게 임금 보전 방안을 신고해야 함. 단, 서면 합의하여 마련한 경우 의무 없음. 15세~18세 미만 근로자는 탄력적 근로시간제와 선택적 근로시간제가 모두 적용되지 않지만, 임신 중인 여성 근로자는 <input class='blank-input' data-ans='선택적 근로시간제|선택적근로시간제|선택적근로제|선택적 근로제'>는 적용됨."
           }
         ]
       }
