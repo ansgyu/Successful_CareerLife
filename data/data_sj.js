@@ -1,4 +1,4 @@
-const quizData = {
+const quizData_sj = {
     "성공적인_직업생활": [
         {
             "id": "SJ_001",
