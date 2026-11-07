@@ -125,9 +125,9 @@ const lectureData_success_01 = {
 // 현재 선택 상태 관리 변수
 let currentSubject = "success";
 let currentLectureId = 1;
-let isStarted = false; // 시작 버튼 클릭 여부 플래그
 
 // DOM 요소 참조
+const selectorCard = document.querySelector(".selector-card");
 const tabBtns = document.querySelectorAll(".tab-btn");
 const lectureSelect = document.getElementById("lectureSelect");
 const startBtn = document.getElementById("startBtn");
@@ -148,7 +148,6 @@ function bindEvents() {
       btn.classList.add("active");
       currentSubject = btn.dataset.subject;
       currentLectureId = 1; // 과목 전환 시 1강으로 리셋
-      isStarted = false;
       updateLectureDropdown();
       renderInitialState();
     });
@@ -156,14 +155,12 @@ function bindEvents() {
 
   lectureSelect.addEventListener("change", (e) => {
     currentLectureId = parseInt(e.target.value, 10);
-    isStarted = false;
     renderInitialState();
   });
 
   if (startBtn) {
     startBtn.addEventListener("click", () => {
-      isStarted = true;
-      renderContent();
+      startStudy();
     });
   }
 }
@@ -183,8 +180,13 @@ function updateLectureDropdown() {
   lectureSelect.value = currentLectureId;
 }
 
-// 시작하기 전 안내 화면
+// 시작하기 전 메인 대기 화면
 function renderInitialState() {
+  // 상단 과목 및 강 선택 영역 표시
+  if (selectorCard) {
+    selectorCard.style.display = "block";
+  }
+
   const subjectName = currentSubject === "success" ? "성공적인 직업생활" : "공업 일반";
   const selectedLec = syllabus[currentSubject].find((lec) => lec.id === currentLectureId);
   const lectureTitle = selectedLec ? selectedLec.title : "";
@@ -200,13 +202,22 @@ function renderInitialState() {
   `;
 }
 
-// 본문 콘텐츠 렌더링 분기
-function renderContent() {
+// 학습 시작 처리: 선택 영역 숨김 및 본문 렌더링
+function startStudy() {
+  if (selectorCard) {
+    selectorCard.style.display = "none";
+  }
+
   if (currentSubject === "success" && currentLectureId === 1) {
     renderSuccessLecture01();
   } else {
     renderPlaceholder();
   }
+}
+
+// 처음 메인(강 선택) 화면으로 돌아가기
+function backToSelector() {
+  renderInitialState();
 }
 
 // 성공적인 직업생활 1강 테이블 및 UI 렌더링
@@ -247,11 +258,13 @@ function renderSuccessLecture01() {
     `;
   });
 
+  // 초기 상태: '정답 확인하기' 버튼만 노출 ('다시 풀기', '돌아가기'는 숨김)
   html += `
     <div class="action-group">
       <div id="scoreDisplay" class="result-score"></div>
-      <button class="btn btn-secondary" id="resetBtn">다시 풀기</button>
       <button class="btn btn-primary" id="checkBtn">정답 확인하기</button>
+      <button class="btn btn-secondary" id="resetBtn" style="display: none;">다시 풀기</button>
+      <button class="btn btn-secondary" id="backBtn" style="display: none;">돌아가기</button>
     </div>
   `;
 
@@ -260,6 +273,7 @@ function renderSuccessLecture01() {
   // 버튼 이벤트 연결
   document.getElementById("checkBtn").addEventListener("click", checkAnswers);
   document.getElementById("resetBtn").addEventListener("click", resetBlanks);
+  document.getElementById("backBtn").addEventListener("click", backToSelector);
 }
 
 // 정답 채점 로직
@@ -291,11 +305,21 @@ function checkAnswers() {
     }
   });
 
+  // 점수 결과 출력
   const scoreDisplay = document.getElementById("scoreDisplay");
   scoreDisplay.innerHTML = `총 <span style="color: var(--primary);">${inputs.length}</span>개 중 <span style="color: ${correctCount === inputs.length ? 'var(--correct)' : 'var(--incorrect)'};">${correctCount}</span>개 정답!`;
+
+  // 정답 확인 후 버튼 전환: '정답 확인하기' 숨기고 '다시 풀기'와 '돌아가기' 노출
+  const checkBtn = document.getElementById("checkBtn");
+  const resetBtn = document.getElementById("resetBtn");
+  const backBtn = document.getElementById("backBtn");
+
+  if (checkBtn) checkBtn.style.display = "none";
+  if (resetBtn) resetBtn.style.display = "inline-block";
+  if (backBtn) backBtn.style.display = "inline-block";
 }
 
-// 빈칸 초기화 로직
+// 빈칸 초기화 로직 (다시 풀기)
 function resetBlanks() {
   const inputs = document.querySelectorAll(".blank-input");
   inputs.forEach((input) => {
@@ -304,13 +328,23 @@ function resetBlanks() {
   });
 
   document.querySelectorAll(".correct-answer-hint").forEach((el) => el.remove());
+
   const scoreDisplay = document.getElementById("scoreDisplay");
   if (scoreDisplay) {
     scoreDisplay.textContent = "";
   }
+
+  // 다시 풀기 상태에서는 다시 '정답 확인하기' 버튼을 노출하고 '다시 풀기'/'돌아가기'는 숨김
+  const checkBtn = document.getElementById("checkBtn");
+  const resetBtn = document.getElementById("resetBtn");
+  const backBtn = document.getElementById("backBtn");
+
+  if (checkBtn) checkBtn.style.display = "inline-block";
+  if (resetBtn) resetBtn.style.display = "none";
+  if (backBtn) backBtn.style.display = "none";
 }
 
-// 미구현 강의 플레이스홀더 화면
+// 준비 중 강의 화면
 function renderPlaceholder() {
   const selectedLec = syllabus[currentSubject].find((lec) => lec.id === currentLectureId);
 
@@ -321,8 +355,13 @@ function renderPlaceholder() {
       <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 6px;">
         상단 탭에서 <strong>[성공적인 직업생활]</strong>을 선택하고 <strong>[01강]</strong>을 선택해 학습을 체험해 보세요.
       </p>
+      <div style="margin-top: 24px;">
+        <button class="btn btn-secondary" id="placeholderBackBtn">돌아가기</button>
+      </div>
     </div>
   `;
+
+  document.getElementById("placeholderBackBtn").addEventListener("click", backToSelector);
 }
 
 // 문서 로드 완료 시 초기화 실행
