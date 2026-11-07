@@ -1,4 +1,4 @@
-const quizData = {
+const quizData_gi = {
     "공업_일반": [
         {
             "id": "GI_001",
