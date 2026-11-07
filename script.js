@@ -46,156 +46,93 @@ const syllabus = {
   ]
 };
 
-// 성공적인 직업생활 1강 핵심 개념 빈칸 데이터
-const lectureData_success_01 = {
-  title: "01강 일과 직업 및 직업 생활",
-  description: "교재의 핵심 개념 표를 채우며 일과 직업의 의미, 직업 요건, 직업 가치관을 복습하세요.",
-  tables: [
-    {
-      caption: "1. 일과 직업의 개념",
-      headers: ["구분", "핵심 내용 및 특징"],
-      rows: [
-        {
-          category: "일(Work)",
-          content: "어떠한 목적을 달성하기 위한 육체적, 정신적 활동"
-        },
-        {
-          category: "직업(Occupation)",
-          content: "사회 구성원으로서 <input class='blank-input' data-ans='생계유지|생계 유지'>를 위하여 자신의 적성과 능력에 따라 일정 기간 <input class='blank-input' data-ans='지속적|지속적으로'> 종사하여 보수를 얻는 활동"
-        },
-        {
-          category: "직(職)과 업(業)",
-          content: "‘직(職)’은 직분을 맡아 행한다는 개인의 <input class='blank-input' data-ans='사회적 역할'>을 의미하고, ‘업(業)’은 생계 유지 및 자신의 능력을 발휘하기 위해 한 가지 일에 몰두함을 뜻함."
-        }
-      ]
-    },
-    {
-      caption: "2. 직업의 성립 요건 (4대 요건)",
-      headers: ["요건", "상세 설명"],
-      rows: [
-        {
-          category: "계속성",
-          content: "매일, 매주, 매월 등 주기적이고 <input class='blank-input' data-ans='계속적|계속적으로'> 행하는 일이어야 함."
-        },
-        {
-          category: "경제성",
-          content: "노동의 대가로 정당한 수입이나 <input class='blank-input' data-ans='보수|수입'>를 얻는 경제적 거래 관계가 성립해야 함."
-        },
-        {
-          category: "사회성",
-          content: "사회 공동체적인 맥락에서 의미 있는 활동이자 <input class='blank-input' data-ans='사회적 기여|사회 기여'>를 전제 조건으로 해야 함."
-        },
-        {
-          category: "윤리성",
-          content: "비윤리적이거나 <input class='blank-input' data-ans='반사회적|불법적'>인 활동을 통한 이윤 추구는 직업으로 인정되지 않음."
-        }
-      ]
-    },
-    {
-      caption: "3. 직업 가치관의 유형",
-      headers: ["구분", "특징 및 추구 가치"],
-      rows: [
-        {
-          category: "내적 직업 가치관",
-          content: "일 자체에서 보람, 즐거움, 성취감, <input class='blank-input' data-ans='자아실현|자아 실현'>, 능력 발휘 등을 중시하는 목적적 가치관"
-        },
-        {
-          category: "외적 직업 가치관",
-          content: "높은 보수(경제적 보상), 명예, 권력, <input class='blank-input' data-ans='직업 안정|직업안정'> 등 외부적 조건과 수단을 중시하는 수단적 가치관"
-        }
-      ]
-    },
-    {
-      caption: "4. 직업 생활의 중요성",
-      headers: ["차원", "주요 중요성 항목"],
-      rows: [
-        {
-          category: "개인적 차원",
-          content: "생계유지, 소속감 형성, 가치 실현, 개인의 사회적 위치 결정, <input class='blank-input' data-ans='자아실현|자아 실현'>"
-        },
-        {
-          category: "사회적 차원",
-          content: "구성원 간의 <input class='blank-input' data-ans='사회적 기능 분담|사회적 역할 분담'> 및 건강한 사회의 유지와 발전"
-        }
-      ]
-    }
-  ]
-};
+// ==========================================
+// [강의 핵심 개념 데이터 저장소 (lectureDatabase)]
+// 규칙: "과목코드_강번호" 형태로 저장합니다.
+//  - 성공적인 직업생활: "success_1", "success_2", ...
+//  - 공업 일반: "industry_1", "industry_2", ...
+// ==========================================
+const lectureDatabase = {
+  // 성공적인 직업생활 1강
+  "success_1": {
+    title: "01강 일과 직업 및 직업 생활",
+    description: "교재의 핵심 개념 표를 채우며 일과 직업의 의미, 직업 요건, 직업 가치관을 복습하세요.",
+    tables: [
+      {
+        caption: "1. 일과 직업의 개념",
+        headers: ["구분", "핵심 내용 및 특징"],
+        rows: [
+          {
+            category: "일(Work)",
+            content: "어떠한 목적을 달성하기 위한 육체적, 정신적 활동"
+          },
+          {
+            category: "직업(Occupation)",
+            content: "사회 구성원으로서 <input class='blank-input' data-ans='생계유지|생계 유지'>를 위하여 자신의 적성과 능력에 따라 일정 기간 <input class='blank-input' data-ans='지속적|지속적으로'> 종사하여 보수를 얻는 활동"
+          },
+          {
+            category: "직(職)과 업(業)",
+            content: "‘직(職)’은 직분을 맡아 행한다는 개인의 <input class='blank-input' data-ans='사회적 역할'>을 의미하고, ‘업(業)’은 생계 유지 및 자신의 능력을 발휘하기 위해 한 가지 일에 몰두함을 뜻함."
+          }
+        ]
+      },
+      {
+        caption: "2. 직업의 성립 요건 (4대 요건)",
+        headers: ["요건", "상세 설명"],
+        rows: [
+          {
+            category: "계속성",
+            content: "매일, 매주, 매월 등 주기적이고 <input class='blank-input' data-ans='계속적|계속적으로'> 행하는 일이어야 함."
+          },
+          {
+            category: "경제성",
+            content: "노동의 대가로 정당한 수입이나 <input class='blank-input' data-ans='보수|수입'>를 얻는 경제적 거래 관계가 성립해야 함."
+          },
+          {
+            category: "사회성",
+            content: "사회 공동체적인 맥락에서 의미 있는 활동이자 <input class='blank-input' data-ans='사회적 기여|사회 기여'>를 전제 조건으로 해야 함."
+          },
+          {
+            category: "윤리성",
+            content: "비윤리적이거나 <input class='blank-input' data-ans='반사회적|불법적'>인 활동을 통한 이윤 추구는 직업으로 인정되지 않음."
+          }
+        ]
+      },
+      {
+        caption: "3. 직업 가치관의 유형",
+        headers: ["구분", "특징 및 추구 가치"],
+        rows: [
+          {
+            category: "내적 직업 가치관",
+            content: "일 자체에서 보람, 즐거움, 성취감, <input class='blank-input' data-ans='자아실현|자아 실현'>, 능력 발휘 등을 중시하는 목적적 가치관"
+          },
+          {
+            category: "외적 직업 가치관",
+            content: "높은 보수(경제적 보상), 명예, 권력, <input class='blank-input' data-ans='직업 안정|직업안정'> 등 외부적 조건과 수단을 중시하는 수단적 가치관"
+          }
+        ]
+      },
+      {
+        caption: "4. 직업 생활의 중요성",
+        headers: ["차원", "주요 중요성 항목"],
+        rows: [
+          {
+            category: "개인적 차원",
+            content: "생계유지, 소속감 형성, 가치 실현, 개인의 사회적 위치 결정, <input class='blank-input' data-ans='자아실현|자아 실현'>"
+          },
+          {
+            category: "사회적 차원",
+            content: "구성원 간의 <input class='blank-input' data-ans='사회적 기능 분담|사회적 역할 분담'> 및 건강한 사회의 유지와 발전"
+          }
+        ]
+      }
+    ]
+  }
 
-// 성공적인 직업생활 2강 핵심 개념 빈칸 데이터
-const lectureData_success_02 = {
-  title: "02강 생애 발달과 직업적 성공 (1)",
-  description: "교재의 핵심 개념 표를 채우며 일과 직업의 의미, 직업 요건, 직업 가치관을 복습하세요.",
-  tables: [
-    {
-      caption: "1. 생애 발달과 발달 과업",
-      headers: ["구분", "핵심 내용 및 특징"],
-      rows: [
-        {
-          category: "일(Work)",
-          content: "어떠한 목적을 달성하기 위한 육체적, 정신적 활동"
-        },
-        {
-          category: "직업(Occupation)",
-          content: "사회 구성원으로서 <input class='blank-input' data-ans='생계유지|생계 유지'>를 위하여 자신의 적성과 능력에 따라 일정 기간 <input class='blank-input' data-ans='지속적|지속적으로'> 종사하여 보수를 얻는 활동"
-        },
-        {
-          category: "직(職)과 업(業)",
-          content: "‘직(職)’은 직분을 맡아 행한다는 개인의 <input class='blank-input' data-ans='사회적 역할'>을 의미하고, ‘업(業)’은 생계 유지 및 자신의 능력을 발휘하기 위해 한 가지 일에 몰두함을 뜻함."
-        }
-      ]
-    },
-    {
-      caption: "2. 직업의 성립 요건 (4대 요건)",
-      headers: ["요건", "상세 설명"],
-      rows: [
-        {
-          category: "계속성",
-          content: "매일, 매주, 매월 등 주기적이고 <input class='blank-input' data-ans='계속적|계속적으로'> 행하는 일이어야 함."
-        },
-        {
-          category: "경제성",
-          content: "노동의 대가로 정당한 수입이나 <input class='blank-input' data-ans='보수|수입'>를 얻는 경제적 거래 관계가 성립해야 함."
-        },
-        {
-          category: "사회성",
-          content: "사회 공동체적인 맥락에서 의미 있는 활동이자 <input class='blank-input' data-ans='사회적 기여|사회 기여'>를 전제 조건으로 해야 함."
-        },
-        {
-          category: "윤리성",
-          content: "비윤리적이거나 <input class='blank-input' data-ans='반사회적|불법적'>인 활동을 통한 이윤 추구는 직업으로 인정되지 않음."
-        }
-      ]
-    },
-    {
-      caption: "3. 직업 가치관의 유형",
-      headers: ["구분", "특징 및 추구 가치"],
-      rows: [
-        {
-          category: "내적 직업 가치관",
-          content: "일 자체에서 보람, 즐거움, 성취감, <input class='blank-input' data-ans='자아실현|자아 실현'>, 능력 발휘 등을 중시하는 목적적 가치관"
-        },
-        {
-          category: "외적 직업 가치관",
-          content: "높은 보수(경제적 보상), 명예, 권력, <input class='blank-input' data-ans='직업 안정|직업안정'> 등 외부적 조건과 수단을 중시하는 수단적 가치관"
-        }
-      ]
-    },
-    {
-      caption: "4. 직업 생활의 중요성",
-      headers: ["차원", "주요 중요성 항목"],
-      rows: [
-        {
-          category: "개인적 차원",
-          content: "생계유지, 소속감 형성, 가치 실현, 개인의 사회적 위치 결정, <input class='blank-input' data-ans='자아실현|자아 실현'>"
-        },
-        {
-          category: "사회적 차원",
-          content: "구성원 간의 <input class='blank-input' data-ans='사회적 기능 분담|사회적 역할 분담'> 및 건강한 사회의 유지와 발전"
-        }
-      ]
-    }
-  ]
+  // 나중에 새로운 강을 추가할 때는 쉼표(,)를 찍고 아래에 바로 붙여넣기만 하면 됩니다!
+  // 예시:
+  // , "industry_1": { title: "01강 산업 구조와 공업의 발달", ... }
+  // , "success_2": { title: "02강 생애 발달과 직업적 성공 (1)", ... }
 };
 
 // 현재 선택 상태 관리 변수
@@ -278,14 +215,18 @@ function renderInitialState() {
   `;
 }
 
-// 학습 시작 처리: 선택 영역 숨김 및 본문 렌더링
+// 학습 시작 처리: 선택 영역 숨김 및 공통 렌더링 호출
 function startStudy() {
   if (selectorCard) {
     selectorCard.style.display = "none";
   }
 
-  if (currentSubject === "success" && currentLectureId === 1) {
-    renderSuccessLecture01();
+  // 규칙 키 생성: "success_1", "industry_1" 등
+  const lectureKey = `${currentSubject}_${currentLectureId}`;
+  const targetData = lectureDatabase[lectureKey];
+
+  if (targetData) {
+    renderLecture(targetData);
   } else {
     renderPlaceholder();
   }
@@ -296,9 +237,8 @@ function backToSelector() {
   renderInitialState();
 }
 
-// 성공적인 직업생활 1강 테이블 및 UI 렌더링
-function renderSuccessLecture01() {
-  const data = lectureData_success_01;
+// 공통 강의 테이블 및 문제 UI 렌더링 함수
+function renderLecture(data) {
   let html = `
     <div class="content-header">
       <h2>${data.title}</h2>
@@ -334,7 +274,7 @@ function renderSuccessLecture01() {
     `;
   });
 
-  // 초기 상태: '정답 확인하기' 버튼만 노출 ('다시 풀기', '돌아가기'는 숨김)
+  // 초기 상태: '정답 확인하기' 버튼만 노출
   html += `
     <div class="action-group">
       <div id="scoreDisplay" class="result-score"></div>
@@ -385,7 +325,7 @@ function checkAnswers() {
   const scoreDisplay = document.getElementById("scoreDisplay");
   scoreDisplay.innerHTML = `총 <span style="color: var(--primary);">${inputs.length}</span>개 중 <span style="color: ${correctCount === inputs.length ? 'var(--correct)' : 'var(--incorrect)'};">${correctCount}</span>개 정답!`;
 
-  // 정답 확인 후 버튼 전환: '정답 확인하기' 숨기고 '다시 풀기'와 '돌아가기' 노출
+  // 정답 확인 후 버튼 전환
   const checkBtn = document.getElementById("checkBtn");
   const resetBtn = document.getElementById("resetBtn");
   const backBtn = document.getElementById("backBtn");
@@ -410,7 +350,7 @@ function resetBlanks() {
     scoreDisplay.textContent = "";
   }
 
-  // 다시 풀기 상태에서는 다시 '정답 확인하기' 버튼을 노출하고 '다시 풀기'/'돌아가기'는 숨김
+  // 다시 풀기 시 버튼 원복
   const checkBtn = document.getElementById("checkBtn");
   const resetBtn = document.getElementById("resetBtn");
   const backBtn = document.getElementById("backBtn");
@@ -420,7 +360,7 @@ function resetBlanks() {
   if (backBtn) backBtn.style.display = "none";
 }
 
-// 준비 중 강의 화면
+// 미구현 강의 플레이스홀더 화면
 function renderPlaceholder() {
   const selectedLec = syllabus[currentSubject].find((lec) => lec.id === currentLectureId);
 
@@ -431,7 +371,7 @@ function renderPlaceholder() {
       <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 6px;">
         상단 탭에서 <strong>[성공적인 직업생활]</strong>을 선택하고 <strong>[01강]</strong>을 선택해 학습을 체험해 보세요.
       </p>
-      <div style="margin-top: 24px;">
+      <div style="margin-top: 20px;">
         <button class="btn btn-secondary" id="placeholderBackBtn">돌아가기</button>
       </div>
     </div>
