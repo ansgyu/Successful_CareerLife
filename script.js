@@ -472,10 +472,6 @@ const lectureDatabase = {
           {
             category: "호프만(Hoffmann)의 산업 분류",
             content: "산업을 생산재 산업과 소비재 산업으로 구분함. 개인 소비자의 최종 소비 목적 생산물은 <input class='blank-input' data-ans='소비재|소비재 제조업'>, 다른 재화를 만드는 데 필요한 중간 생산물 생산은 <input class='blank-input' data-ans='생산재|생산재 제조업'>에 해당함."
-          },
-          {
-            category: "발달 단계별 분류",
-            content: "가내 수공업 중심의 <input class='blank-input' data-ans='재래 공업|재래공업'> → 부피가 작고 노동 집약적인 섬유·가발 등의 <input class='blank-input' data-ans='경공업'> → 대규모 설비·자본 중심의 철강·석유화학 등의 <input class='blank-input' data-ans='중화학 공업|중화학공업'> → 연구 개발 비중이 높은 <input class='blank-input' data-ans='첨단 공업|첨단공업'> 순으로 발달함."
           }
         ]
       },
@@ -485,20 +481,20 @@ const lectureDatabase = {
         headers: ["구분 기준", "생산 방식별 핵심 특징 및 예시"],
         rows: [
           {
-            category: "작업 공정: 개별 생산",
-            content: "소비자의 요구에 따라 제품을 개별적으로 생산하며, 제품마다 가공 방법과 설비가 다름. 고가품 생산에 적합함. (예: <input class='blank-input' data-ans='선박|항공기|맞춤 의류|특수 기계'> 등)"
+            category: "작업 공정: <input class='blank-input' data-ans='개별'> 생산",
+            content: "소비자의 요구에 따라 제품을 개별적으로 생산하며, 제품마다 가공 방법과 설비가 다름. 고가품 생산에 적합함. (예: 선박, 항공기, 맞춤 의류, 특수 기계 등)"
           },
           {
             category: "작업 공정: 로트(Lot) 생산",
             content: "개별 생산과 연속 생산의 중간 형태로, 같은 부품이나 제품을 1회 생산 분량인 <input class='blank-input' data-ans='로트|lot|Lot'> 단위로 모아서 생산함. (예: 가구, 도자기, 제화 등)"
           },
           {
-            category: "작업 공정: 연속 생산",
-            content: "표준 제품을 정해진 공정에 따라 대량으로 연속 생산하는 방식임. 조립 라인 방식과 연속 흐름 방식이 있음. (예: <input class='blank-input' data-ans='자동차|가전제품|시멘트|비료'> 등)"
+            category: "작업 공정: <input class='blank-input' data-ans='연속'> 생산",
+            content: "표준 제품을 정해진 공정에 따라 대량으로 연속 생산하는 방식임. 조립 라인 방식과 연속 흐름 방식이 있음. (예: 자동차, 가전제품, 시멘트, 비료 등)"
           },
           {
-            category: "작업 공정: 프로젝트 생산",
-            content: "제한된 기간 내에 이루어지는 대규모 일회성 생산 방식으로 작업자 운용이 유연해야 함. (예: <input class='blank-input' data-ans='댐|교량|고속도로|대형 건물'> 등)"
+            category: "작업 공정: <input class='blank-input' data-ans='프로젝트'> 생산",
+            content: "제한된 기간 내에 이루어지는 대규모 일회성 생산 방식으로 작업자 운용이 유연해야 함. (예: 댐, 교량, 고속도로, 대형 건물 등)"
           },
           {
             category: "시장 수요: 계획(시장) 생산",
@@ -545,20 +541,20 @@ const lectureDatabase = {
         headers: ["분류 기준", "유형별 특징 및 사례"],
         rows: [
           {
-            category: "공급 주체: 공공 서비스",
+            category: "공급 주체: <input class='blank-input' data-ans='공공'> 서비스",
             content: "공공의 이익을 목적으로 국가, 지자체, 공기업 등이 공급함. (예: <input class='blank-input' data-ans='교육|교통|행정|경찰|소방'> 등)"
           },
           {
-            category: "공급 주체: 민간 서비스",
+            category: "공급 주체: <input class='blank-input' data-ans='민간'> 서비스",
             content: "이윤 창출을 목적으로 기업이나 민간단체가 공급함. (예: 도소매업, 금융업, 여가 산업 등)"
           },
           {
-            category: "수요 주체: 소비자 서비스",
-            content: "수요자가 일반 소비자이며 직접 제공됨. 소비자 가까이에 <input class='blank-input' data-ans='분산 입지|분산입지'>하는 경향이 있음. (예: 소매업, 음식점업, 숙박업 등)"
+            category: "수요 주체: <input class='blank-input' data-ans='소비자'> 서비스",
+            content: "수요자가 일반 소비자이며 직접 제공됨. 소비자 가까이에 분산 입지하는 경향이 있음. (예: 소매업, 음식점업, 숙박업 등)"
           },
           {
-            category: "수요 주체: 생산자 서비스",
-            content: "수요자가 생산자(기업)이며 다른 재화·서비스 생산에 투입됨. 교통·통신이 편리한 대도시에 <input class='blank-input' data-ans='집중 입지|집중|집적'>하는 경향이 있음. (예: <input class='blank-input' data-ans='법률|연구 개발|광고|회계|컨설팅'> 등)"
+            category: "수요 주체: <input class='blank-input' data-ans='생산자'> 서비스",
+            content: "수요자가 생산자(기업)이며 다른 재화·서비스 생산에 투입됨. 교통·통신이 편리한 대도시에 집중 입지하는 경향이 있음. (예: 법률, 연구 개발, 광고, 회계, 컨설팅 등)"
           }
         ]
       },
@@ -639,17 +635,14 @@ const lectureDatabase = {
         rows: [
           {
             category: "기초 능력군",
-            description: "모든 직무 수행에 기초가 되는 기본 소양 역량 (2개)",
             answers: ["의사소통 능력", "수리 능력"]
           },
           {
             category: "업무 처리 능력군",
-            description: "실제 현장 업무 처리에 필요한 전공 직업 능력 (5개)",
             answers: ["문제 해결 능력", "정보 능력", "기술 능력", "자원 관리 능력", "조직 이해 능력"]
           },
           {
             category: "직장 적응 능력군",
-            description: "원만한 조직 생활 및 올바른 태도 형성에 필요한 능력 (3개)",
             answers: ["대인 관계 능력", "자기 개발 능력", "직업 윤리"]
           }
         ]
@@ -671,42 +664,34 @@ const lectureDatabase = {
         rows: [
           {
             category: "의사소통 능력",
-            description: "글과 말을 정확히 이해하고 표현하는 능력",
             answers: ["문서 이해, 경청, 의사 표현"]
           },
           {
             category: "수리 능력",
-            description: "사칙연산, 통계, 도표를 업무에 적용하는 능력",
             answers: ["기초 연산, 기초 통계, 도표 분석"]
           },
           {
             category: "문제 해결 능력",
-            description: "문제 발생 시 창의적·논리적으로 대안을 찾아 해결하는 능력",
             answers: ["사고력, 문제 처리 능력"]
           },
           {
             category: "정보 능력",
-            description: "정보 수집·분석·관리 및 컴퓨터 활용 능력",
             answers: ["컴퓨터 활용 능력, 정보 처리 능력"]
           },
           {
             category: "자원 관리 능력",
-            description: "시간, 자본, 시설, 인력을 체계적으로 계획·할당하는 능력",
             answers: ["시간 관리, 예산 관리, 물적·인적 자원 관리"]
           },
           {
             category: "대인 관계 능력",
-            description: "동료 및 고객과 원만하게 소통하고 협력하는 능력",
             answers: ["팀워크, 리더십, 갈등 관리, 협상"]
           },
           {
             category: "자기 개발 능력",
-            description: "스스로를 객관적으로 파악하고 경력을 관리하는 능력",
             answers: ["자아 인식 능력, 자기 관리 능력, 경력 개발 능력"]
           },
           {
             category: "직업 윤리",
-            description: "원만한 직업 생활을 위한 태도, 매너, 올바른 직업관",
             answers: ["근로 윤리, 공동체 윤리"]
           }
         ]
@@ -729,47 +714,38 @@ const lectureDatabase = {
         rows: [
           {
             category: "의사소통 능력 향상",
-            description: "언어적/비언어적 상호작용 개선",
             answers: ["다양한 문서를 살펴보고 요약하며, 상대방 이야기에 공감하며 경청함"]
           },
           {
             category: "수리 능력 향상",
-            description: "수치 데이터 및 도표 활용",
             answers: ["평균·분산의 기본 개념을 익히고 업무 목적에 맞는 도표를 작성함"]
           },
           {
             category: "문제 해결 능력 향상",
-            description: "논리적 분석 및 대안 실행",
             answers: ["문제의 인과 관계와 구조를 파악하고 창의적 대안을 도출함"]
           },
           {
             category: "정보 능력 향상",
-            description: "데이터 수집·처리 및 DB 활용",
             answers: ["데이터베이스를 구축하고 정보를 체계적으로 가공·적시 활용함"]
           },
           {
             category: "기술 능력 향상",
-            description: "도구·설비 매뉴얼 이해 및 기술 선택",
             answers: ["업무 매뉴얼을 파악하고 최신 기술 동향을 예측하여 현장에 적용함"]
           },
           {
             category: "자원 관리 능력 향상",
-            description: "시간·예산·물품·인력 효율 배분",
             answers: ["과업의 우선순위를 고려하여 시간 계획을 세우고 적재적소에 인력을 배치함"]
           },
           {
             category: "대인 관계 능력 향상",
-            description: "팀워크, 리더십 및 갈등 조정",
             answers: ["경청과 지원으로 동료의 동기를 유발하고 협력·타협 전략을 활용함"]
           },
           {
             category: "자기 개발 능력 향상",
-            description: "자기 관리 및 지속적 경력 개발",
             answers: ["자신의 적성을 성찰하고 구체적인 경력 목표를 세워 인내심 있게 관리함"]
           },
           {
             category: "직업 윤리 향상",
-            description: "시간 준수, 정직, 공동체 배려",
             answers: ["근면한 태도로 시간을 준수하고 고객 가치를 우선시하는 봉사 의식을 가짐"]
           }
         ]
