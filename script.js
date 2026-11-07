@@ -63,7 +63,7 @@ const syllabus = {
 const lectureDatabase = {
   "success_1": {
     title: "01강 일과 직업 및 직업 생활",
-    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요.",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
     tables: [
       {
         type: "blank",
@@ -171,6 +171,301 @@ const lectureDatabase = {
           {
             category: "임금 보전과 적용 제외",
             content: "3개월 이내의 탄력적 근로시간제는 임금 보전 방안을 강구해야 함. 3개월을 초과하는 탄력적 근로시간제는 <input class='blank-input' data-ans='고용노동부장관|고용노동부 장관|노동부 장관|노동부장관'>에게 임금 보전 방안을 신고해야 함. 단, 서면 합의하여 마련한 경우 의무 없음. 15세~18세 미만 근로자는 탄력적 근로시간제와 선택적 근로시간제가 모두 적용되지 않지만, 임신 중인 여성 근로자는 <input class='blank-input' data-ans='선택적 근로시간제|선택적근로시간제|선택적근로제|선택적 근로제'>는 적용됨."
+          }
+        ]
+      }
+    ]
+  },
+  "success_2": {
+    title: "02강 생애 발달과 직업적 성공 (1)",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "box",
+        caption: "1. 해비거스트(Havighurst)의 생애 발달 단계별 특징 및 발달 과업",
+        headers: ["발달 단계", "해당 발달 특징 및 과업을 끌어다 넣으세요"],
+        words: [
+          "대뇌·감각기관 발달",
+          "젖 떼기·걸음마·말하기",
+          "애착 형성",
+          "어휘력 급증 및 또래 놀이",
+          "기본 생활 습관 형성",
+          "학습 습관 형성",
+          "도덕성의 기초 형성",
+          "급격한 신체 성장 및 성적 성숙",
+          "자아 정체감 형성하기",
+          "진로 탐색 및 성인 준비",
+          "직업 선택 및 취업",
+          "배우자 선택과 결혼",
+          "직업 수행 지식·기술 습득",
+          "신체적 노화 시작 및 갱년기",
+          "인생 철학 확립하기",
+          "직업 안정 및 직업 전환",
+          "건강 약화 대비 심신 단련",
+          "체력 저하와 의존성 증가",
+          "은퇴 적응하기",
+          "배우자 사별 및 죽음 준비"
+        ],
+        rows: [
+          {
+            category: "영아기 (0~2세)",
+            description: "신체 성장이 가장 빠르고 감각·운동을 통한 지능 발달",
+            answers: ["대뇌·감각기관 발달", "젖 떼기·걸음마·말하기", "애착 형성"]
+          },
+          {
+            category: "유아기 (2~6세)",
+            description: "자기중심적 언어 사용 및 어휘력 급증",
+            answers: ["어휘력 급증 및 또래 놀이", "기본 생활 습관 형성"]
+          },
+          {
+            category: "아동기 (6~12세)",
+            description: "운동 기능 정교화 및 자아 존중감·규범 형성",
+            answers: ["학습 습관 형성", "도덕성의 기초 형성"]
+          },
+          {
+            category: "청소년기 (12~20세)",
+            description: "성장 급등, 2차 성징 및 가설·연역적 사고",
+            answers: ["급격한 신체 성장 및 성적 성숙", "자아 정체감 형성하기", "진로 탐색 및 성인 준비"]
+          },
+          {
+            category: "성년기 (20~40세)",
+            description: "사회적 역할 수행 및 왕성한 직업 생활",
+            answers: ["직업 선택 및 취업", "배우자 선택과 결혼", "직업 수행 지식·기술 습득"]
+          },
+          {
+            category: "중년기 (40~65세)",
+            description: "생애 가장 생산적인 시기이자 직업적 안정",
+            answers: ["신체적 노화 시작 및 갱년기", "인생 철학 확립하기", "직업 안정 및 직업 전환", "건강 약화 대비 심신 단련"]
+          },
+          {
+            category: "노년기 (65세 이후)",
+            description: "신체 감각 및 기억 감퇴, 은퇴 후 삶의 적응",
+            answers: ["체력 저하와 의존성 증가", "은퇴 적응하기", "배우자 사별 및 죽음 준비"]
+          }
+        ]
+      },
+      {
+        type: "box",
+        caption: "2. 생애 발달 과정의 시기별 직업 생활 특징",
+        headers: ["시기", "해당 시기의 직업 생활 특징을 끌어다 넣으세요"],
+        words: [
+          "학업 성취감과 유능감 확장",
+          "자신에게 맞는 직업 선택",
+          "자신만의 전문 영역 확장",
+          "원만한 대인 관계와 정보 교류",
+          "안정적인 직업 생활과 경제적 안정",
+          "직장 생활 경력자로서 역할과 책임",
+          "노후 대비 일과 취미 활동 탐색",
+          "은퇴 준비 및 은퇴 후 생활 적응",
+          "자아 존중감 유지 및 여가 생활"
+        ],
+        rows: [
+          {
+            category: "청소년기",
+            description: "진로 탐색 및 기초 역량 배양",
+            answers: ["학업 성취감과 유능감 확장"]
+          },
+          {
+            category: "성년기",
+            description: "직업 세계 입문 및 전문성 개발",
+            answers: ["자신에게 맞는 직업 선택", "자신만의 전문 영역 확장", "원만한 대인 관계와 정보 교류"]
+          },
+          {
+            category: "중년기",
+            description: "직업적 지위 확보 및 생산성 유지",
+            answers: ["안정적인 직업 생활과 경제적 안정", "직장 생활 경력자로서 역할과 책임", "노후 대비 일과 취미 활동 탐색"]
+          },
+          {
+            category: "노년기",
+            description: "사회 활동 재편 및 건강 관리",
+            answers: ["은퇴 준비 및 은퇴 후 생활 적응", "자아 존중감 유지 및 여가 생활"]
+          }
+        ]
+      }
+    ]
+  },
+  "success_3": {
+    title: "03강 생애 발달과 직업적 성공 (2)",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "box",
+        caption: "1. 생애 발달 단계별 직업적 성공을 위한 요건",
+        headers: ["발달 단계", "해당 시기에 요구되는 성공 요건을 끌어다 넣으세요"],
+        words: [
+          "직업적 성공의 의미 정립",
+          "필요한 지식·기술·태도 준비",
+          "어려운 상황에 대한 긍정적 인식",
+          "업무 수행 시 창의성과 도전 정신 발휘",
+          "업무 전문성 강화와 꾸준한 자기 개발",
+          "직업 윤리와 책임 의식 함양",
+          "경력을 바탕으로 한 지도력(리더십) 발휘",
+          "다양한 경험을 바탕으로 한 위기 대처 능력",
+          "지금까지 쌓은 기술에 대한 장인 정신과 소명 의식",
+          "재취업 훈련 및 노인 교육 프로그램 참여",
+          "건강한 인간관계 유지 및 여가 생활"
+        ],
+        rows: [
+          {
+            category: "청소년기",
+            description: "성공의 기초 자질 함양 및 긍정적 태도",
+            answers: ["직업적 성공의 의미 정립", "필요한 지식·기술·태도 준비", "어려운 상황에 대한 긍정적 인식"]
+          },
+          {
+            category: "성년기",
+            description: "도전 정신, 전문성 구축 및 직업 윤리",
+            answers: ["업무 수행 시 창의성과 도전 정신 발휘", "업무 전문성 강화와 꾸준한 자기 개발", "직업 윤리와 책임 의식 함양"]
+          },
+          {
+            category: "중년기",
+            description: "지도력, 위기 대처 및 장인 정신",
+            answers: ["경력을 바탕으로 한 지도력(리더십) 발휘", "다양한 경험을 바탕으로 한 위기 대처 능력", "지금까지 쌓은 기술에 대한 장인 정신과 소명 의식"]
+          },
+          {
+            category: "노년기",
+            description: "재취업 교육, 관계 유지 및 여가 활용",
+            answers: ["재취업 훈련 및 노인 교육 프로그램 참여", "건강한 인간관계 유지 및 여가 생활"]
+          }
+        ]
+      }
+    ]
+  },
+  "success_4": {
+    title: "04강 기업의 종류와 형태별 특징",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 상법상 회사 기업의 형태별 특징",
+        headers: ["회사 형태", "사원 구성 및 주요 특징"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='합명회사|합명 회사'>",
+            content: "2인 이상의 <input class='blank-input' data-ans='무한책임사원|무한 책임 사원'>만으로 조직되며, 채무에 대해 연대하여 무한 책임을 지는 대표적인 <input class='blank-input' data-ans='인적 공동 기업|인적공동기업'>임. 지분 양도 시 사원 전원의 동의가 필요함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='합자회사|합자 회사'>",
+            content: "1인 이상의 무한 책임 사원과 1인 이상의 <input class='blank-input' data-ans='유한책임사원|유한 책임 사원'>으로 구성된 형태임. 무한 책임 사원은 업무 집행 권리와 의무를 갖고, 유한 책임 사원은 경영에 참여하지 않고 출자 한도 내 책임만 지며 이익 분배를 받음."
+          },
+          {
+            category: "<input class='blank-input' data-ans='유한회사|유한 회사'>",
+            content: "최소 1인 이상의 유한 책임 사원으로 구성되며, 회사의 중요한 의사 결정은 <input class='blank-input' data-ans='사원총회|사원 총회'>에서 하고 경영은 <input class='blank-input' data-ans='이사'>가 전담함. 1좌마다 1의결권을 행사함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='유한책임회사|유한 책임 회사'>",
+            content: "1인 이상의 유한 책임 사원으로 구성되나, 사원 총회 소집 절차를 생략할 수 있어 벤처 기업에 유리함. 출자액과 무관하게 사원 1인이 <input class='blank-input' data-ans='1의결권|1표'>을 행사하며 업무 집행은 <input class='blank-input' data-ans='업무집행자|업무 집행자|업무 집행 사원'>이 담당함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='주식회사|주식 회사'>",
+            content: "자본을 주식으로 소액 균등 분할 조달하며 주주는 출자 한도 내 유한 책임을 짐. <input class='blank-input' data-ans='자본의 증권화|자본 증권화'>로 대규모 자본 조달이 가능하며, 최고 의사 결정은 <input class='blank-input' data-ans='주주총회|주주 총회'>, 업무 집행 의사 결정은 <input class='blank-input' data-ans='이사회'>가 담당함."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 규모에 따른 기업의 분류",
+        headers: ["규모 구분", "근거 법령 및 세부 기준"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='대기업'>",
+            content: "근거 법령은 <input class='blank-input' data-ans='공정거래법|독점규제 및 공정거래에 관한 법률'>임. 자산 총액 5조 원 이상인 <input class='blank-input' data-ans='공시대상기업집단|공시 대상 기업 집단'>과 자산 총액이 GDP의 0.5% 이상인 상호출자제한기업집단을 의미함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='중견기업'>",
+            content: "근거 법령은 <input class='blank-input' data-ans='중견기업법|중견기업 성장 촉진 및 경쟁력 강화에 관한 특별법'>임. 중소기업 범위를 벗어나고 상호출자제한기업집단에 속하지 않는 기업으로, 업종 상관없이 자산 총액이 <input class='blank-input' data-ans='5000억|5,000억|5천억'>원 이상인 기업이 포함됨."
+          },
+          {
+            category: "<input class='blank-input' data-ans='중소기업'>",
+            content: "근거 법령은 <input class='blank-input' data-ans='중소기업기본법'>임. 업종별 평균 매출액이 400억~1,800억 원 이하이고 자산 총액이 <input class='blank-input' data-ans='5000억|5,000억|5천억'>원 미만인 기준을 충족해야 함."
+          }
+        ]
+      }
+    ]
+  },
+  "success_5": {
+    title: "05강 기업의 경영 활동",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 경영자의 분류 (소유 여부 및 계층)",
+        headers: ["분류 기준", "경영자 유형 및 주요 특징"],
+        rows: [
+          {
+            category: "소유 여부",
+            content: "자본 출자 및 소유·경영을 겸하며 위험을 모두 부담하는 <input class='blank-input' data-ans='소유경영자|소유 경영자'>, 경영권 일부를 위임받고 급여를 받는 <input class='blank-input' data-ans='고용경영자|고용 경영자'>, 전문적 지식과 능력을 바탕으로 경영 활동을 전담하는 <input class='blank-input' data-ans='전문경영자|전문 경영자'>"
+          },
+          {
+            category: "경영 계층",
+            content: "기업의 전반적인 방향과 장기 계획을 책임지는 <input class='blank-input' data-ans='최고경영자|최고 경영자'>(대표이사, 사장 등), 중간에서 일선 업무를 지휘·조정하는 <input class='blank-input' data-ans='중간경영자|중간 경영자'>(부장, 과장 등), 현장 실무자를 직접 지도하는 <input class='blank-input' data-ans='일선경영자|일선 경영자|하위경영자'>(대리, 반장 등)"
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 경영 관리 순환 과정 (단계별 개념)",
+        headers: ["단계 순서", "관리 활동 설명"],
+        rows: [
+          {
+            category: "1단계",
+            content: "경영 목표를 수립하고 이를 달성하기 위한 전략과 구체적인 추진 절차를 결정하는 단계: <input class='blank-input' data-ans='계획|계획(Planning)|Planning'>"
+          },
+          {
+            category: "2단계",
+            content: "업무를 분류하고 권한과 책임을 확정하여 인적·물적 자원을 체계적으로 배분하는 단계: <input class='blank-input' data-ans='조직|조직(Organizing)|Organizing'>"
+          },
+          {
+            category: "3단계",
+            content: "리더십을 발휘하고 동기를 부여하며 구성원들이 목표를 향해 협력하도록 지도·감독하는 단계: <input class='blank-input' data-ans='지휘|지휘(Leading)|Leading'>"
+          },
+          {
+            category: "4단계",
+            content: "실제 경영 성과를 측정하여 계획과 비교·평가하고 피드백을 통해 개선 조치를 취하는 단계: <input class='blank-input' data-ans='통제|통제(Controlling)|Controlling'>"
+          }
+        ]
+      },
+      {
+        type: "box",
+        caption: "3. 부문별 기업의 주요 경영 활동 분류",
+        headers: ["경영 활동 부문", "해당 부문에 속하는 세부 활동을 끌어다 넣으세요"],
+        words: [
+          "인력 채용 및 배치",
+          "신입 사원 OJT 교육",
+          "임금 및 복리 후생 관리",
+          "노사 관계 및 협력",
+          "공정 관리 및 설비 자동화",
+          "재고 관리 및 불량률 감소",
+          "시장 세분화(STP 전략)",
+          "신제품 광고 및 판촉 촉진",
+          "자금 조달 및 투자 결정",
+          "주주 배당금 결정",
+          "재무제표 작성 및 결산 보고"
+        ],
+        rows: [
+          {
+            category: "인적 자원 관리 활동",
+            description: "인재의 확보, 개발, 보상, 유지 기능",
+            answers: ["인력 채용 및 배치", "신입 사원 OJT 교육", "임금 및 복리 후생 관리", "노사 관계 및 협력"]
+          },
+          {
+            category: "생산 관리 활동",
+            description: "품질, 원가, 납기 최적화 및 공정 운영",
+            answers: ["공정 관리 및 설비 자동화", "재고 관리 및 불량률 감소"]
+          },
+          {
+            category: "마케팅 관리 활동",
+            description: "고객 분석 및 4P(제품, 가격, 유통, 촉진) 믹스 실행",
+            answers: ["시장 세분화(STP 전략)", "신제품 광고 및 판촉 촉진"]
+          },
+          {
+            category: "재무 관리 활동",
+            description: "기업 가치 극대화를 위한 자금의 조달과 운용",
+            answers: ["자금 조달 및 투자 결정", "주주 배당금 결정"]
+          },
+          {
+            category: "회계 정보 관리 활동",
+            description: "이해관계자를 위한 거래 기록 및 재무 상태 보고",
+            answers: ["재무제표 작성 및 결산 보고"]
           }
         ]
       }
