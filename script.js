@@ -542,7 +542,7 @@ const lectureDatabase = {
         rows: [
           {
             category: "공급 주체: <input class='blank-input' data-ans='공공'> 서비스",
-            content: "공공의 이익을 목적으로 국가, 지자체, 공기업 등이 공급함. (예: <input class='blank-input' data-ans='교육|교통|행정|경찰|소방'> 등)"
+            content: "공공의 이익을 목적으로 국가, 지자체, 공기업 등이 공급함. (예: 교육, 교통, 행정, 경찰, 소방 등)"
           },
           {
             category: "공급 주체: <input class='blank-input' data-ans='민간'> 서비스",
@@ -569,7 +569,7 @@ const lectureDatabase = {
           },
           {
             category: "<input class='blank-input' data-ans='대량 생산 방식|대량 생산|대량생산방식'>",
-            content: "대규모 고객에게 동질의 서비스를 동시에 제공할 수 있도록 체계화·표준화한 방식임. (예: <input class='blank-input' data-ans='패스트푸드점|프랜차이즈|대형 패스트푸드점'> 등)"
+            content: "대규모 고객에게 동질의 서비스를 동시에 제공할 수 있도록 체계화·표준화한 방식임. (예: 패스트푸드점, 프랜차이즈 등)"
           }
         ]
       },
@@ -590,22 +590,18 @@ const lectureDatabase = {
         rows: [
           {
             category: "서비스 공장 (Service Factory)",
-            description: "자동화 및 표준화로 대량 생산, 공정 효율성 중시",
             answers: ["상호작용 낮음 · 노동집중도 낮음", "항공 운송, 통신, 패스트푸드점"]
           },
           {
             category: "서비스 점포 (Service Shop)",
-            description: "높은 고객 맞춤화 제공, 설비 자본 투자 필요",
             answers: ["상호작용 높음 · 노동집중도 낮음", "병원, 여행사, 자동차 정비소"]
           },
           {
             category: "대량 서비스 (Mass Service)",
-            description: "표준화된 산출물, 노동 집중도가 높음",
             answers: ["상호작용 낮음 · 노동집중도 높음", "도소매업, 교육, 금융, 공공 서비스"]
           },
           {
             category: "전문 서비스 (Professional Service)",
-            description: "개인화된 맞춤 서비스와 고도의 전문성 요구",
             answers: ["상호작용 높음 · 노동집중도 높음", "의사, 변호사, 회계사, 건축가"]
           }
         ]
