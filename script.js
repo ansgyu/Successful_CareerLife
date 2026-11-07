@@ -61,88 +61,96 @@ const syllabus = {
 //       - rows: 각 분류(카테고리) 및 해당 카테고리에 속해야 할 정답 단어 배열(answers)
 // ==========================================
 const lectureDatabase = {
-  // 성공적인 직업생활 1강
   "success_1": {
     title: "01강 일과 직업 및 직업 생활",
     description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요.",
     tables: [
-      // 1. 빈칸 채우기 형태
       {
         type: "blank",
-        caption: "1. 일과 직업의 개념 (빈칸 채우기)",
-        headers: ["구분", "핵심 내용 및 특징"],
+        caption: "1. 직업의 요건",
+        headers: ["구분", "내용"],
         rows: [
           {
-            category: "일(Work)",
-            content: "어떠한 목적을 달성하기 위한 육체적, 정신적 활동"
+            category: "<input class='blank-input' data-ans='계속성'>",
+            content: "주기적, 계속적으로 행해지는 것"
           },
           {
-            category: "직업(Occupation)",
-            content: "사회 구성원으로서 <input class='blank-input' data-ans='생계유지|생계 유지'>를 위하여 자신의 적성과 능력에 따라 일정 기간 <input class='blank-input' data-ans='지속적|지속적으로'> 종사하여 보수를 얻는 활동"
+            category: "<input class='blank-input' data-ans='윤리성'>",
+            content: "비윤리적인 영리 행위나 반사회적인 활동을 통한 경제적인 이윤 추구는 직업으로 인정되지 않음."
           },
           {
-            category: "직(職)과 업(業)",
-            content: "‘직(職)’은 직분을 맡아 행한다는 개인의 <input class='blank-input' data-ans='사회적 역할'>을 의미하고, ‘업(業)’은 생계 유지 및 자신의 능력을 발휘하기 위해 한 가지 일에 몰두함을 뜻함."
+            category: "<input class='blank-input' data-ans='경제성'>",
+            content: "경제적인 거래 관계가 성립하는 활동을 수행해야 함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='사회성'>",
+            content: "사회 공동체적인 맥락에서 의미 있는 활동"
           }
         ]
       },
-      // 2. 빈칸 채우기 형태
       {
         type: "blank",
-        caption: "2. 직업의 성립 요건 4대 요건 (빈칸 채우기)",
-        headers: ["요건", "상세 설명"],
+        caption: "2. 9대 직업 가치",
+        headers: ["가치 요인", "설명"],
         rows: [
           {
-            category: "계속성",
-            content: "매일, 매주, 매월 등 주기적이고 <input class='blank-input' data-ans='계속적|계속적으로'> 행하는 일이어야 함."
+            category: "<input class='blank-input' data-ans='자기 개발|자기개발'>",
+            content: "직업을 통해 지식, 기술, 능력 등을 발전시키며 성장해 나가는 것을 중시함."
           },
           {
-            category: "경제성",
-            content: "노동의 대가로 정당한 수입이나 <input class='blank-input' data-ans='보수|수입'>를 얻는 경제적 거래 관계가 성립해야 함."
+            category: "<input class='blank-input' data-ans='변화 지향|변화지향'>",
+            content: "업무가 고정되어 있지 않고 변화 가능한 것을 중시함."
           },
           {
-            category: "사회성",
-            content: "사회 공동체적인 맥락에서 의미 있는 활동이자 <input class='blank-input' data-ans='사회적 기여|사회 기여'>를 전제 조건으로 해야 함."
+            category: "<input class='blank-input' data-ans='성취'>",
+            content: "자신이 세운 목표를 실현하기 위해 계획한 일에 관심을 가지고, 자신의 능력을 발휘함으로써 목표를 달성해 나가는 것을 중시함."
           },
           {
-            category: "윤리성",
-            content: "비윤리적이거나 <input class='blank-input' data-ans='반사회적|불법적'>인 활동을 통한 이윤 추구는 직업으로 인정되지 않음."
+            category: "<input class='blank-input' data-ans='사회적 인정|사회적인정'>",
+            content: "다른 사람들과 사회로부터 일의 가치를 인정받는 것을 중시함."
           }
         ]
       },
-      // 3. [★ 보기 박스형 드래그 분류 형태]
       {
         type: "box",
-        caption: "3. 직업 가치관의 유형 (보기 박스형 단어 분류)",
-        headers: ["분류", "보기에서 알맞은 단어를 드래그(또는 클릭)하여 넣으세요"],
-        // 보기 박스에 제시될 단어 목록
-        words: ["성취감", "보람", "자아실현", "능력 발휘", "즐거움", "높은 보수", "명예", "권력", "직업 안정"],
+        caption: "3. 직업 가치관의 유형",
+        headers: ["분류", "<보기>에서 알맞은 단어를 드래그(또는 클릭)"],
+        words: ["경제적 보상", "창의성 발휘", "흥미", "사회적 인정", "적성", "직업 안정", "사회 공헌"],
         rows: [
           {
-            category: "내적 직업 가치관",
-            description: "일 자체에서 보람, 즐거움 등을 중시하는 가치관",
-            answers: ["성취감", "보람", "자아실현", "능력 발휘", "즐거움"]
+            category: "왜재적 직업 가치",
+            answers: ["경제적 보상", "직업 안정", "사회적 인정"]
           },
           {
-            category: "외적 직업 가치관",
-            description: "보수, 명예, 권력 등 외부적 조건과 수단을 중시하는 가치관",
-            answers: ["높은 보수", "명예", "권력", "직업 안정"]
+            category: "내재적 직업 가치",
+            answers: ["흥미", "적성", "창의성 발휘", "사회 공헌"]
           }
         ]
       },
-      // 4. 빈칸 채우기 형태
       {
         type: "blank",
-        caption: "4. 직업 생활의 중요성 (빈칸 채우기)",
-        headers: ["차원", "주요 중요성 항목"],
+        caption: "4. 유연 근로 시간제",
+        headers: ["분류", "설명"],
         rows: [
           {
-            category: "개인적 차원",
-            content: "생계유지, 소속감 형성, 가치 실현, 개인의 사회적 위치 결정, <input class='blank-input' data-ans='자아실현|자아 실현'>"
+            category: "2주 단위 탄력근로제",
+            content: "<input class='blank-input' data-ans='취업 규칙|취업규칙'>에 따라 특정 주에는 법정근로시간을 넘겨 일할 수 있지만, 어떤 주든 <input class='blank-input' data-ans='48'>시간을 넘길 수 없음."            
           },
           {
-            category: "사회적 차원",
-            content: "구성원 간의 <input class='blank-input' data-ans='사회적 기능 분담|사회적 역할 분담'> 및 건강한 사회의 유지와 발전"
+            category: "3개월 단위 탄력근로제",
+            content: "<input class='blank-input' data-ans='근로자 대표|근로자대표'>와 <input class='blank-input' data-ans='서면 합의|서면합의'>하면 3개월까지 평균해서 법정근로시간을 맞출 수 있음. 특정 주는 최대 <input class='blank-input' data-ans='52'>시간, 특정 날은 최대 <input class='blank-input' data-ans='12'>시간까지 일할 수 있음."
+          },
+          {
+            category: "3개월 초과 6개월 이내 탄력근로제",
+            content: "<input class='blank-input' data-ans='근로자 대표|근로자대표'>와 <input class='blank-input' data-ans='서면 합의|서면합의'>하면 기간 동안 평균적으로 법정근로시간을 지키면서 특정 주에는 최대 52시간, 특정 날에는 최대 12시간까지 일할 수 있음."
+          },
+          {
+            category: "선택적 근로시간제",
+            content: "<input class='blank-input' data-ans='취업 규칙|취업규칙'>에 따라 근로자가 출퇴근 시간을 스스로 정할 수 있는 경우에 적용함. <input class='blank-input' data-ans='근로자 대표|근로자대표'>와 <input class='blank-input' data-ans='서면 합의|서면합의'>를 통해 합의함. 일반적으로 <input class='blank-input' data-ans='1'>개월 이내로 정산 기간을 정하지만, 신상품이나 신기술 연구 개발 업무는 <input class='blank-input' data-ans='3'>개월까지 가능함. 이 기간에는 1주 평균 근로시간이 법정 기준을 넘지 않아야 함."
+          },
+          {
+            category: "임금 보전과 적용 제외",
+            content: "3개월 이내의 탄력적 근로시간제는 임금 보전 방안을 강구해야 함. 3개월을 초과하는 탄력적 근로시간제는 <input class='blank-input' data-ans='고용노동부장관|고용노동부 장관|노동부 장관|노동부장관'>에게 임금 보전 방안을 신고해야 함. 단, 서면 합의하여 마련한 경우 의무 없음."
           }
         ]
       }
