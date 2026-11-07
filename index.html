@@ -1,144 +1,276 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>과목별 빈칸 학습 프로그램</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>직업탐구 수능특강 개념 마스터</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg-gray: #f8fafc;
+      --card-bg: #ffffff;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --correct: #16a34a;
+      --incorrect: #dc2626;
+      --correct-bg: #dcfce7;
+      --incorrect-bg: #fee2e2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-gray);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .selector-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      margin-bottom: 25px;
+      border: 1px solid var(--border-color);
+    }
+
+    .subject-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 12px 16px;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      background: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      border-color: var(--primary);
+      color: var(--primary);
+      background-color: #eff6ff;
+    }
+
+    .lecture-select-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .lecture-select-group label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      font-size: 0.95rem;
+      outline: none;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+
+    select:focus {
+      border-color: var(--primary);
+    }
+
+    .content-area {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
+
+    .content-header {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+
+    .content-header h2 {
+      font-size: 1.4rem;
+      color: #0f172a;
+    }
+
+    .concept-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+    }
+
+    .concept-table th, .concept-table td {
+      border: 1px solid var(--border-color);
+      padding: 12px 14px;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .concept-table th {
+      background-color: #f1f5f9;
+      color: #334155;
+      width: 25%;
+      font-weight: 600;
+    }
+
+    .blank-input {
+      border: 1px solid #94a3b8;
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.95rem;
+      text-align: center;
+      min-width: 90px;
+      margin: 0 4px;
+      font-weight: bold;
+      transition: all 0.2s;
+    }
+
+    .blank-input:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+
+    .blank-input.correct {
+      border-color: var(--correct) !important;
+      background-color: var(--correct-bg) !important;
+      color: var(--correct) !important;
+    }
+
+    .blank-input.incorrect {
+      border-color: var(--incorrect) !important;
+      background-color: var(--incorrect-bg) !important;
+      color: var(--incorrect) !important;
+    }
+
+    .correct-answer-hint {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: var(--incorrect);
+      font-weight: 600;
+      margin-left: 4px;
+    }
+
+    .action-group {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .btn {
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      background-color: #e2e8f0;
+      color: var(--text-dark);
+    }
+
+    .btn-secondary:hover {
+      background-color: #cbd5e1;
+    }
+
+    .result-score {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .placeholder-view {
+      text-align: center;
+      padding: 50px 20px;
+      color: var(--text-muted);
+    }
+
+    .placeholder-view h3 {
+      font-size: 1.2rem;
+      color: #334155;
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+<body>
+  <div class="container">
+    <header>
+      <h1>수능특강 직업탐구 개념 마스터</h1>
+      <p>과목과 강을 선택하고 핵심 요약 표의 빈칸을 채우며 개념을 점검해보세요.</p>
+    </header>
 
-    <main class="max-w-2xl w-full mx-auto p-4 sm:p-6 my-auto">
+    <section class="selector-card">
+      <div class="subject-tabs">
+        <button class="tab-btn active" data-subject="success">성공적인 직업생활</button>
+        <button class="tab-btn" data-subject="industry">공업 일반</button>
+      </div>
 
-        <!-- 1. 메인 화면 -->
-        <section id="setup-screen" class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 space-y-6">
-            <h1 class="text-2xl font-bold text-center text-indigo-600">📚 빈칸 척척 학습 프로그램</h1>
-            <p class="text-sm text-center text-slate-500">과목과 범위를 선택하고 학습을 시작하세요!</p>
+      <div class="lecture-select-group">
+        <label for="lectureSelect">학습할 강의 선택</label>
+        <select id="lectureSelect"></select>
+      </div>
+    </section>
 
-            <div class="space-y-5">
-                <!-- 과목 선택 (js/config.js 의 SUBJECTS 로 자동 생성) -->
-                <div>
-                    <label for="subject-select" class="block text-sm font-semibold mb-1">과목 선택</label>
-                    <select id="subject-select" class="w-full p-3 border rounded-xl bg-slate-50 focus:ring-2 focus:ring-indigo-500 outline-none"></select>
-                </div>
+    <main class="content-area" id="learningArea"></main>
+  </div>
 
-                <!-- 강 선택 (여러 개 선택 가능) -->
-                <div>
-                    <div class="flex items-end justify-between mb-1">
-                        <span class="block text-sm font-semibold">강 선택 <span class="font-normal text-slate-400">(여러 개 선택 가능)</span></span>
-                        <span id="lesson-summary" class="text-xs font-medium text-indigo-600"></span>
-                    </div>
-                    <div class="lesson-box">
-                        <label class="lesson-row lesson-row-all">
-                            <input type="checkbox" id="select-all" class="lesson-check">
-                            <span class="lesson-title font-semibold">모두 선택</span>
-                        </label>
-                        <div id="lesson-list" class="lesson-list"></div>
-                    </div>
-                </div>
-
-                <!-- 문항 수 (버튼 선택 + 직접 입력) -->
-                <div>
-                    <label for="count-input" class="block text-sm font-semibold mb-2">풀 문항 수</label>
-                    <div id="count-presets" class="flex flex-wrap gap-2 mb-3">
-                        <button type="button" class="chip" data-count="10">10문항</button>
-                        <button type="button" class="chip" data-count="20">20문항</button>
-                        <button type="button" class="chip" data-count="30">30문항</button>
-                        <button type="button" class="chip" data-count="50">50문항</button>
-                        <button type="button" class="chip" data-count="all">전체 문항</button>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <input type="number" id="count-input" min="1" step="1" inputmode="numeric" placeholder="직접 입력"
-                            class="w-32 p-3 border rounded-xl bg-slate-50 focus:ring-2 focus:ring-indigo-500 outline-none">
-                        <span class="text-sm text-slate-600">문항</span>
-                    </div>
-                    <p id="count-hint" class="mt-2 text-xs text-slate-500"></p>
-                </div>
-            </div>
-
-            <button type="button" id="start-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold p-3.5 rounded-xl transition shadow-lg shadow-indigo-100">
-                학습 시작하기 🚀
-            </button>
-        </section>
-
-        <!-- 2. 학습 화면 -->
-        <section id="quiz-screen" class="hidden bg-white rounded-2xl shadow-xl p-6 sm:p-8 space-y-6">
-            <div class="flex justify-between items-center gap-3 text-sm font-medium text-slate-500 border-b pb-3">
-                <span id="progress-text" class="shrink-0">문제 1 / 10</span>
-                <span id="topic-badge" class="bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-xs font-semibold text-right">단원명</span>
-            </div>
-
-            <div class="space-y-3">
-                <h2 id="question-text" class="text-lg sm:text-xl font-semibold leading-relaxed">
-                    문장 내용이 여기에 표시됩니다.
-                </h2>
-            </div>
-
-            <div class="space-y-3">
-                <input type="text" id="user-answer" placeholder="정답을 입력하세요" autocomplete="off"
-                    class="w-full p-3.5 border-2 rounded-xl focus:border-indigo-500 outline-none text-lg">
-
-                <div id="feedback-box" class="hidden p-4 rounded-xl text-sm space-y-2">
-                    <!-- 정답 여부 및 해설 표시 -->
-                </div>
-            </div>
-
-            <div class="flex gap-3 pt-2">
-                <button type="button" id="submit-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold p-3.5 rounded-xl transition">
-                    확인
-                </button>
-                <button type="button" id="override-btn" class="hidden bg-emerald-600 hover:bg-emerald-700 text-white font-bold p-3.5 rounded-xl transition">
-                    정답으로 처리하기 ✅
-                </button>
-                <button type="button" id="next-btn" class="hidden flex-1 bg-slate-800 hover:bg-slate-900 text-white font-bold p-3.5 rounded-xl transition">
-                    다음 문제 👉
-                </button>
-            </div>
-        </section>
-
-        <!-- 3. 결과 화면 -->
-        <section id="result-screen" class="hidden bg-white rounded-2xl shadow-xl p-6 sm:p-8 space-y-6">
-            <h2 class="text-2xl font-bold text-center text-indigo-600">🎉 학습 완료!</h2>
-
-            <div class="bg-indigo-50 p-6 rounded-2xl text-center space-y-2">
-                <p class="text-sm text-slate-600">최종 정답률</p>
-                <p id="accuracy-rate" class="text-4xl font-extrabold text-indigo-600">0%</p>
-                <p id="score-summary" class="text-sm text-slate-500">맞은 개수: 0 / 전체: 0</p>
-            </div>
-
-            <div class="space-y-3">
-                <h3 class="font-bold text-slate-700">❌ 오답 문장 리스트</h3>
-                <div id="wrong-list" class="max-h-60 overflow-y-auto space-y-2 pr-1">
-                    <!-- 오답 목록 동적 생성 -->
-                </div>
-            </div>
-
-            <div class="flex gap-3">
-                <button type="button" id="copy-btn" class="flex-1 bg-amber-500 hover:bg-amber-600 text-white font-bold p-3.5 rounded-xl transition shadow-lg shadow-amber-100">
-                    오답노트에 추가하기 📋
-                </button>
-                <button type="button" id="reset-btn" class="flex-1 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold p-3.5 rounded-xl transition">
-                    처음으로 돌아가기 🏠
-                </button>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ① 과목별 데이터 파일 (data 폴더) -->
-    <!-- 새 과목 추가 시: data/data_xx.js 를 만들고(변수명 quizData_xx) 여기에 한 줄 추가 + js/config.js 에도 등록 -->
-    <script src="data/data_sj.js"></script> <!-- 성공적인 직업생활: const quizData_sj = {...} -->
-    <script src="data/data_gi.js"></script> <!-- 공업 일반: const quizData_gi = {...} -->
-
-    <!-- ② 프로그램 코드 (js 폴더) : 아래 순서대로 불러와야 합니다 -->
-    <script src="js/config.js"></script>      <!-- 과목 목록, 강 제목 -->
-    <script src="js/utils.js"></script>       <!-- 공용 함수 (섞기, 화면 전환 등) -->
-    <script src="js/data-loader.js"></script> <!-- 데이터 합치기, 강별 문항 수 집계 -->
-    <script src="js/setup.js"></script>       <!-- 메인 화면 (과목/강/문항 수 선택) -->
-    <script src="js/quiz.js"></script>        <!-- 문제 풀이, 결과 화면 -->
-    <script src="js/main.js"></script>        <!-- 시작 지점 -->
+  <script src="script.js"></script>
 </body>
 </html>
