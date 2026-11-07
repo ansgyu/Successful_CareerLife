@@ -98,14 +98,6 @@ function initQuiz() {
     }
 
     quizEl.initialized = true;
-
-   // initQuiz() 함수 내부 또는 적절한 위치에 추가
-   const saveBtn = document.getElementById("copy-btn"); // HTML 버튼 ID에 맞춰 수정하세요 (예: "save-wrong-btn" 등)
-   if (saveBtn) {
-       saveBtn.textContent = "오답노트 클라우드 저장"; // 버튼 텍스트 변경 (선택사항)
-       saveBtn.removeEventListener("click", copyWrongNotes); // 기존 복사 기능이 있다면 제거
-       saveBtn.addEventListener("click", saveWrongNotesToFirebase);
-   }
 }
 
 
