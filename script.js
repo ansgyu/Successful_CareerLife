@@ -1094,6 +1094,643 @@ const lectureDatabase = {
         ]
       }
     ]
+  },
+  "success_15": {
+    title: "15강 근로관계와 법 (1)",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 헌법상 노동 3권",
+        headers: ["권리", "주요 내용 및 법적 보장"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='단결권'>",
+            content: "근로자가 근로 조건의 향상을 위하여 자주적으로 노동조합이나 그 밖의 단결체를 조직·가입하고 운영할 수 있는 권리"
+          },
+          {
+            category: "<input class='blank-input' data-ans='단체교섭권|단체 교섭권'>",
+            content: "근로자 대표가 사용자 측과 근로 조건에 대하여 대등한 입장에서 교섭하고 단체 협약을 체결할 수 있는 권리(사용자는 정당한 이유 없이 거부 불가)"
+          },
+          {
+            category: "<input class='blank-input' data-ans='단체행동권|단체 행동권'>",
+            content: "자신의 주장을 관철하기 위해 사용자에 대항하여 파업, 태업, 보이콧 등 근로자 전체가 동일한 행동을 벌일 수 있는 쟁의권"
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 근로기준법의 기본 원리 및 임금 지급의 4대 원칙",
+        headers: ["구분", "핵심 원칙 및 내용"],
+        rows: [
+          {
+            category: "근로 조건의 기준",
+            content: "근로기준법에서 정하는 근로 조건은 <input class='blank-input' data-ans='최저 기준|최저기준'>이므로 근로 관계 당사자는 이 기준을 이유로 근로 조건을 낮출 수 없음."
+          },
+          {
+            category: "기본 권익 보호",
+            content: "성별·국적·신앙·사회적 신분을 이유로 차별을 금지하는 <input class='blank-input' data-ans='균등 처우|균등한 처우'>, 폭행·협박 등을 금지하는 <input class='blank-input' data-ans='강제 근로의 금지|강제근로 금지'>, 영리로 타인의 취업에 개입하지 못하는 <input class='blank-input' data-ans='중간 착취의 배제|중간착취 배제'>, 공적 직무 수행을 보장하는 <input class='blank-input' data-ans='공민권 행사 보장|공민권 행사'>"
+          },
+          {
+            category: "임금 지급 4원칙",
+            content: "통화(법정 화폐)로 지급하는 <input class='blank-input' data-ans='통화불의 원칙|통화불'>, 근로자 본인에게 지급하는 <input class='blank-input' data-ans='직접불의 원칙|직접불'>, 전액을 지급하는 <input class='blank-input' data-ans='전액불의 원칙|전액불'>, 매월 1회 이상 일정한 날짜에 정기적으로 지급하는 <input class='blank-input' data-ans='정기불의 원칙|정기불'>"
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "3. 5인 미만 사업장 적용 제외 규정 및 근로계약 기간·임금",
+        headers: ["구분", "세부 법적 규정 및 적용 기준"],
+        rows: [
+          {
+            category: "5인 미만 미적용",
+            content: "상시 근로자 5인 미만 사업장에는 <input class='blank-input' data-ans='연차유급휴가|연차 유급 휴가 및 연차수당'>, 생리 휴가, 연장·야간·휴일 <input class='blank-input' data-ans='가산수당|가산 수당'>, 휴업 수당, 정당한 이유 없는 해고 제한 및 해고 서면 통지 의무가 적용되지 않음(단, 해고 30일 전 <input class='blank-input' data-ans='해고 예고|해고예고'> 의무는 적용됨)."
+          },
+          {
+            category: "근로계약 기간",
+            content: "기간제 근로자의 계속 근로 기간이 <input class='blank-input' data-ans='2년'>을 초과하는 경우 기간의 정함이 없는 근로 계약(무기계약직)을 체결한 근로자로 간주함."
+          },
+          {
+            category: "최저임금",
+            content: "2026년 기준 법정 시간당 최저임금은 <input class='blank-input' data-ans='10320원|10,320원|10,320|10320'>임. 1년 이상 계약 시 단순 노무직이 아닌 수습 근로자는 3개월 이내에 한해 최저임금의 <input class='blank-input' data-ans='90%|90 퍼센트'>를 감액 지급 가능함."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "4. 근로 시간, 휴일·휴가 및 주휴수당",
+        headers: ["구분", "시간 및 산정 기준"],
+        rows: [
+          {
+            category: "법정 근로 시간",
+            content: "성인(만 18세 이상)은 1일 <input class='blank-input' data-ans='8시간'>, 1주 40시간(연장 근로 주 12시간 한도, 1주 최장 52시간). 연소 근로자(만 15세 이상~18세 미만)는 1일 <input class='blank-input' data-ans='7시간'>, 1주 35시간(연장 1일 1시간, 1주 5시간 한도, 1주 최장 40시간)."
+          },
+          {
+            category: "가산 임금",
+            content: "법정 근로 시간을 초과하는 연장 근로, 밤 10시부터 익일 오전 6시까지의 <input class='blank-input' data-ans='야간 근로|야간근로'>, 유급 휴일 근무에 대해서는 통상 임금의 <input class='blank-input' data-ans='50%|50 퍼센트|50'> 이상을 가산하여 지급함."
+          },
+          {
+            category: "주휴일 및 수당",
+            content: "1주간 소정 근로일을 개근한 근로자에게 1주 평균 1회 이상 부여하는 유급 휴일이며, 주휴수당은 <input class='blank-input' data-ans='1일 소정 근로 시간×시간급|1일 소정근로시간 x 시급|1일 소정근로시간×시급'>으로 계산함(1주 15시간 미만 초단시간 근로자는 미적용)."
+          },
+          {
+            category: "연차 유급 휴가",
+            content: "1년 미만 근로자는 1개월 개근 시 <input class='blank-input' data-ans='1일'>의 유급 휴가, 1년 이상 근속하고 80% 이상 출근 시 <input class='blank-input' data-ans='15일'>의 유급 휴가 부여(3년 이상 근속 시 매 2년마다 1일 가산, 최대 25일 한도)."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "5. 해고 예고의 예외, 계약 종료 및 퇴직금",
+        headers: ["구분", "요건 및 처리 기준"],
+        rows: [
+          {
+            category: "즉시 해고 예외",
+            content: "근로자의 계속 근로 기간이 <input class='blank-input' data-ans='3개월 미만'>인 경우, 천재·사변 등으로 사업 계속이 불가능한 경우, 근로자가 고의로 사업에 막대한 지장을 초래하거나 재산상 손해를 끼친 경우에는 30일 전 해고 예고(또는 30일분 통상임금 지급)를 하지 않아도 됨."
+          },
+          {
+            category: "근로관계 종료",
+            content: "근로자의 자유의사에 의한 사직, 합의에 의한 <input class='blank-input' data-ans='권고사직|권고 사직'>, 사용자의 일방적 의사표시인 <input class='blank-input' data-ans='해고'>, 계약 기간 만료 및 정년 퇴직 등으로 종료됨."
+          },
+          {
+            category: "퇴직금 규정",
+            content: "계속 근로 기간이 <input class='blank-input' data-ans='1년 이상'>이고 4주간 평균 1주 소정근로시간이 15시간 이상인 근로자에게 계속 근로 1년에 대하여 <input class='blank-input' data-ans='30일분|30일'> 이상의 평균 임금을 퇴사일로부터 <input class='blank-input' data-ans='14일 이내'>에 지급해야 함."
+          }
+        ]
+      }
+    ]
+  },
+  "success_16": {
+    title: "16강 근로관계와 법 (2)",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 근로계약서 작성 및 사용자의 금지 사항",
+        headers: ["구분", "주요 법적 제한 및 의무"],
+        rows: [
+          {
+            category: "필수 기재 사항",
+            content: "임금(구성 항목, 계산 및 지급 방법), <input class='blank-input' data-ans='소정 근로 시간|소정근로시간'>, 휴일(주휴일 등), <input class='blank-input' data-ans='연차 유급 휴가|연차유급휴가'>, 근로 계약 기간, 취업 장소와 종사 업무 등을 서면으로 명시하고 근로자에게 교부해야 함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='위약 예정의 금지|위약예정 금지'>",
+            content: "근로 계약 불이행에 대하여 위약금 또는 손해 배상액을 예정하는 계약을 체결하지 못함"
+          },
+          {
+            category: "<input class='blank-input' data-ans='전차금 상계의 금지|전차금 상계 금지'>",
+            content: "근로할 것을 조건으로 빌린 돈과 임금을 일방적으로 맞바꾸는 계약 체결을 금지함"
+          },
+          {
+            category: "<input class='blank-input' data-ans='강제 저금의 금지|강제저금 금지'>",
+            content: "근로 계약에 덧붙여 강제 저축 또는 저축금 관리를 규정하는 계약을 체결하지 못함"
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 현장 실습 및 미성년자 근로 보호",
+        headers: ["구분", "세부 준수 기준"],
+        rows: [
+          {
+            category: "현장 실습 계약",
+            content: "실습 시작 <input class='blank-input' data-ans='7일 전까지'> 회사, 실습생, 학교장이 현장 실습 표준 협약서를 3부 작성하여 1부씩 보관함. 실습 시간은 1일 7시간(동의 시 1일 1시간, 1주 5시간 연장 가능, 주 40시간 이내), 주 2일 이상 휴일 보장, 야간 및 휴일 실습은 금지됨. 채용 전환은 수업일수 <input class='blank-input' data-ans='2/3|3분의 2'> 시점 이후 가능함."
+          },
+          {
+            category: "취업 연령 제한",
+            content: "만 15세 미만자는 취업할 수 없으나 고용노동부 장관이 발급한 <input class='blank-input' data-ans='취직 인허증|취직인허증'>이 있으면 가능함. 만 18세 미만 연소자 고용 시 <input class='blank-input' data-ans='가족관계기록사항에 관한 증명서|가족관계증명서'>와 친권자(또는 후견인) 동의서를 사업장에 갖추어야 함."
+          },
+          {
+            category: "미성년자 계약 원칙",
+            content: "근로 계약은 친권자가 대리할 수 없고 <input class='blank-input' data-ans='본인(미성년자)|미성년자 본인|본인'>이 직접 체결해야 함. 단, 근로 계약이 미성년자에게 불리한 경우 친권자, 후견인, <input class='blank-input' data-ans='고용노동부 장관|고용노동부장관'>이 계약을 해지할 수 있음."
+          },
+          {
+            category: "야간·휴일 제한",
+            content: "18세 미만자는 오후 10시~오전 6시 야간 근로 및 휴일 근로를 시킬 수 없으나, 본인의 동의와 <input class='blank-input' data-ans='고용노동부 장관의 인가|고용노동부장관 인가'>를 받으면 예외적으로 가능함."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "3. 권익 침해, 차별 시정 및 부당해고 구제 절차",
+        headers: ["절차 및 제도", "신청 기한 및 구제 기관"],
+        rows: [
+          {
+            category: "임금 체불 구제",
+            content: "고용노동부 진정서 제출, 체불액 3,000만 원 미만 시 법원에 <input class='blank-input' data-ans='소액 사건 심판|소액사건심판'> 청구 가능. 임금 채권의 소멸 시효는 행사 가능한 날로부터 <input class='blank-input' data-ans='3년'>임."
+          },
+          {
+            category: "비정규직 차별 시정",
+            content: "임금, 상여금, 복리후생 등 합리적 이유 없는 차별에 대해 차별적 처우가 있은 날로부터 <input class='blank-input' data-ans='6개월 이내'>에 지방노동위원회에 차별 시정 신청 가능함."
+          },
+          {
+            category: "부당해고 구제 1단계",
+            content: "부당 해고 또는 부당 노동 행위가 있은 날로부터 <input class='blank-input' data-ans='3개월 이내'>에 관할 <input class='blank-input' data-ans='지방노동위원회'>에 구제 신청을 함."
+          },
+          {
+            category: "부당해고 구제 2·3단계",
+            content: "지방노동위원회의 판정에 불복하는 경우 명령서 송달일로부터 <input class='blank-input' data-ans='10일 이내'>에 <input class='blank-input' data-ans='중앙노동위원회'>에 재심 신청을 하고, 재심 판정에 불복 시 <input class='blank-input' data-ans='15일 이내'>에 행정 법원에 행정 소송을 제기함(민사상 해고 무효 확인 소송은 별도 제기 가능)."
+          }
+        ]
+      }
+    ]
+  },
+  "success_17": {
+    title: "17강 고용 서비스와 사회 제도",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 고용보험 요율 및 적용 제외 대상",
+        headers: ["구분", "보험료율 및 적용 기준"],
+        rows: [
+          {
+            category: "실업 급여 요율",
+            content: "근로자와 사업주가 각각 <input class='blank-input' data-ans='0.9%|0.9 퍼센트'>씩 균등하게 부담함(총 1.8%)."
+          },
+          {
+            category: "고용안정·직능사업 요율",
+            content: "사업주가 전액 부담하며 150인 미만 기업은 <input class='blank-input' data-ans='0.25%'>, 150인 이상 우선 지원 대상 기업은 <input class='blank-input' data-ans='0.45%'>, 150~1,000인 미만 기업은 0.65%, 1,000인 이상 기업 및 공공기관은 0.85%를 부담함."
+          },
+          {
+            category: "적용 제외 근로자",
+            content: "1개월 소정근로 60시간(주 15시간) 미만 근로자(단, <input class='blank-input' data-ans='3개월 이상'> 계속 근로자는 적용 대상), 공무원(임기제·별정직은 본인 희망 시 가입 가능), <input class='blank-input' data-ans='사립학교교직원 연금법|사립학교 교직원 연금법'> 적용자, 별정우체국 직원, 상시 4명 이하 농림어업 비법인, <input class='blank-input' data-ans='65세 이후'> 신규 고용된 자(실업급여 미적용)."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 구직급여 소정급여일수 및 실업급여 체계",
+        headers: ["구분", "지급 일수 및 급여 종류"],
+        rows: [
+          {
+            category: "구직급여 수급 요건",
+            content: "이직일 이전 18개월간 피보험 단위 기간이 통산하여 <input class='blank-input' data-ans='180일 이상'>이어야 하며, 적극적 재취업 노력 및 비자발적 이직이어야 함."
+          },
+          {
+            category: "소정 급여 일수 (연령/기간)",
+            content: "50세 미만은 근속 기간에 따라 120일~<input class='blank-input' data-ans='240일'>, 50세 이상 및 장애인은 120일~<input class='blank-input' data-ans='270일'> 범위에서 지급됨(자영업자는 120~210일)."
+          },
+          {
+            category: "취업 촉진 수당 4종",
+            content: "소정급여일수의 절반 이상을 남기고 조기 취업 시 지급하는 <input class='blank-input' data-ans='조기 재취업 수당|조기재취업수당'>, 직업훈련 수강 시 <input class='blank-input' data-ans='직업 능력 개발 수당|직업능력개발수당'>, 원거리 구직 활동비인 광역 구직 활동비, 주거 이전 비용인 이주비가 있음."
+          },
+          {
+            category: "자영업자 실업급여 특례",
+            content: "자영업자 피보험자의 경우 구직급여와 취업촉진수당은 지급되지만, 연장급여와 <input class='blank-input' data-ans='조기 재취업 수당|조기재취업수당'>은 제외됨."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "3. 수급 자격 인정 정당한 이직 사유 (이직 전 1년 내 2개월 이상 발생)",
+        headers: ["구분", "세부 불리한 근로 조건 기준"],
+        rows: [
+          {
+            category: "조건 저하 및 체불",
+            content: "실제 근로 조건이 채용 시 제시된 조건보다 낮아진 경우, <input class='blank-input' data-ans='임금 체불|임금체불'>이 발생한 경우, 소정근로 임금이 <input class='blank-input' data-ans='최저임금'>에 미달한 경우"
+          },
+          {
+            category: "시간 초과 및 휴업",
+            content: "근로기준법상 연장 근로의 제한을 위반한 경우, 사업장 휴업으로 휴업 전 평균 임금의 <input class='blank-input' data-ans='70% 미만'>을 지급받은 경우, 사업의 양도·인수·합병 또는 폐업 권고를 받은 경우"
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "4. 모성 보호 제도 (육아휴직·출산전후휴가·근로시간 단축)",
+        headers: ["제도명", "주요 요건 및 보장 내용"],
+        rows: [
+          {
+            category: "육아휴직",
+            content: "만 <input class='blank-input' data-ans='8세 이하'> 또는 초등학교 2학년 이하의 자녀 양육을 위해 신청하며 기간은 자녀 1명당 최대 1년(부모 모두 3개월 이상 사용 등 요건 충족 시 최대 <input class='blank-input' data-ans='6개월'> 추가 연장 가능). 피보험 단위 기간 180일 이상 충족 시 육아휴직 급여 지급."
+          },
+          {
+            category: "출산전후휴가",
+            content: "임신 중인 여성 근로자에게 출산 전후를 합하여 <input class='blank-input' data-ans='90일'>(다태아 120일)의 유급 휴가를 부여하며, 출산 후 휴가 기간이 반드시 <input class='blank-input' data-ans='45일'>(다태아 60일) 이상 확보되어야 함."
+          },
+          {
+            category: "육아기 근로시간 단축",
+            content: "만 8세 이하 자녀 양육을 위해 주당 근로 시간을 <input class='blank-input' data-ans='15시간 이상 35시간 이하|15~35시간'>로 단축하여 근무할 수 있는 제도임."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "5. 고용보험 가입 및 실업급여 수급 절차",
+        headers: ["단계 및 절차", "신고 기한 및 행정 절차"],
+        rows: [
+          {
+            category: "고용보험 가입 절차",
+            content: "보험 관계 성립일로부터 <input class='blank-input' data-ans='14일 이내'>에 근로복지공단에 보험 관계 성립 신고서를 제출해야 하며, 근로자 피보험 자격 취득 신고는 고용한 날이 속하는 달의 <input class='blank-input' data-ans='다음 달 15일까지'> 신고해야 함."
+          },
+          {
+            category: "구직급여 지급액",
+            content: "이직 전 마지막 3개월간 평균 임금 기초일액의 <input class='blank-input' data-ans='60%'>에 소정 급여 일수를 곱하여 산정함."
+          },
+          {
+            category: "수급 절차 및 대기기간",
+            content: "구직 신청(워크넷) 및 수급 자격 설명회 교육 이수 후 고용센터에 수급 자격 인정 신청을 함. 최초 실업 인정 시 인정일로부터 <input class='blank-input' data-ans='7일간'>은 대기 기간으로 구직급여가 미지급되며, 이후 <input class='blank-input' data-ans='1~4주'>마다 실업 인정을 받아야 함."
+          }
+        ]
+      }
+    ]
+  },
+  "success_18": {
+    title: "18강 산업 안전과 재해 예방",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 산업재해의 정의 및 중대재해 기준",
+        headers: ["구분", "법률적 정의 및 분류 기준"],
+        rows: [
+          {
+            category: "산업재해 정의",
+            content: "노무를 제공하는 자가 업무에 관계되는 건설물, 설비, 원재료, 분진 등에 의하거나 작업 또는 기타 업무로 인해 사망·부상하거나 질병에 걸리는 것(1인 이상 고용 사업장 필수 가입, 보험료는 <input class='blank-input' data-ans='사업주 전액 부담|사업주가 전액 납부|사업주'>)."
+          },
+          {
+            category: "중대재해 기준",
+            content: "사망자가 <input class='blank-input' data-ans='1명 이상'> 발생한 재해, 3개월 이상의 요양이 필요한 부상자가 동시에 <input class='blank-input' data-ans='2명 이상'> 발생한 재해, 부상자 또는 직업성 질병자가 동시에 <input class='blank-input' data-ans='10명 이상'> 발생한 재해"
+          },
+          {
+            category: "재해 발생 보고",
+            content: "4일 이상 요양 재해 발생 시 1개월 이내에 관할 지방고용노동관서에 산업재해 조사표를 제출해야 하며, 산업재해 기록은 <input class='blank-input' data-ans='3년간|3년'> 보존해야 함."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 하인리히의 재해 예방 4원칙",
+        headers: ["예방 원칙", "원칙별 핵심 내용"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='손실 우연의 원칙'>",
+            content: "사고의 결과로 발생하는 손실이나 상해의 정도는 우연성에 의해 결정되므로, 재해를 막기 위해서는 사고 발생 자체를 사전에 예방해야 함(하인리히 1:29:300의 법칙)."
+          },
+          {
+            category: "<input class='blank-input' data-ans='원인 연계의 원칙|원인 계기의 원칙'>",
+            content: "사고는 직접 원인(불안전한 상태·행동)에 의해 발생하고, 직접 원인은 기본 원인(인적·기계적·관리적)에 의해 유발되는 등 원인이 사슬처럼 연계되어 일어남."
+          },
+          {
+            category: "<input class='blank-input' data-ans='예방 가능의 원칙'>",
+            content: "천재지변을 제외한 대부분의 인재(사고의 98%)는 사전 예방 대책을 통해 위험 요인을 미리 제거하면 반드시 예방할 수 있음."
+          },
+          {
+            category: "<input class='blank-input' data-ans='대책 선정의 원칙'>",
+            content: "사고의 원인을 파악한 후 기술적 개선, 교육 훈련 개선, 작업 관리 등 가장 알맞고 효과적인 개선 대책을 선정하여 적용해야 함."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "3. 하인리히 사고 예방 대책 5단계",
+        headers: ["단계 순서", "단계별 주요 실행 활동"],
+        rows: [
+          {
+            category: "제1단계",
+            content: "경영자가 재해 예방 활동을 전개하기 위해 방침을 수립하고 추진 조직을 구성함: <input class='blank-input' data-ans='안전 관리 조직|안전관리조직'>"
+          },
+          {
+            category: "제2단계",
+            content: "안전 기록 검토, 작업 분석, 안전 점검 및 사고 조사를 통해 현장의 불안전 요소를 찾아냄: <input class='blank-input' data-ans='사실의 발견|사실 발견'>"
+          },
+          {
+            category: "제3단계",
+            content: "현장 조사 결과를 바탕으로 사고를 유발한 직접 원인과 간접 원인을 규명함: <input class='blank-input' data-ans='분석 및 평가|평가 및 분석|평가·분석'>"
+          },
+          {
+            category: "제4단계",
+            content: "파악된 원인을 바탕으로 기술적 대책, 교육적 대책, 규제적 대책 중 적절한 방법을 고름: <input class='blank-input' data-ans='시정책의 선정|시정 방법의 선정'>"
+          },
+          {
+            category: "제5단계",
+            content: "선정된 개선책을 현장에 실제로 실행하고 효과를 재평가하여 미비점을 보완함: <input class='blank-input' data-ans='시정책의 적용|시정 방법의 적용'>"
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "4. 안전 보건 표지 및 업무상 재해 분류",
+        headers: ["구분", "정의 및 하위 분류"],
+        rows: [
+          {
+            category: "안전 보건 표지",
+            content: "위험 장소나 유해 시설에 근로자의 판단 착오를 방지하기 위해 설치하는 표지로, 특정 행동을 못하게 하는 <input class='blank-input' data-ans='금지 표지'>(빨간색 원), 위험을 알리는 <input class='blank-input' data-ans='경고 표지'>(노란색 삼각형), 보호구 착용을 명령하는 <input class='blank-input' data-ans='지시 표지'>(파란색 원), 피난·구호를 안내하는 <input class='blank-input' data-ans='안내 표지'>(녹색 사각형)로 구분됨."
+          },
+          {
+            category: "업무상 사고",
+            content: "근로자가 근로 계약에 따른 업무 수행 또는 그에 따르는 행위 중 발생한 사고나 사업주가 제공한 시설물 결함에 의한 사고"
+          },
+          {
+            category: "업무상 질병",
+            content: "업무 수행 과정에서 유해·위험 요인을 취급하거나 노출되어 발생한 질병 또는 직업성 스트레스로 인한 질환"
+          },
+          {
+            category: "출퇴근 재해",
+            content: "사업주가 제공한 교통수단을 이용하거나 통상적인 경로와 방법으로 출퇴근하던 중 발생한 사고"
+          }
+        ]
+      },
+      {
+        type: "box",
+        caption: "5. 산업재해보상보험의 주요 보험 급여 서비스",
+        headers: ["급여 종류", "해당하는 보상 내용을 끌어다 넣으세요"],
+        words: [
+          "3일 초과 치료비 및 간병료 지급",
+          "취업 불가 기간 평균 임금의 70% 지급",
+          "치유 후 신체 장해 시 제1급~14급별 지급",
+          "치유 후 상시·수시 간병 필요 시 실비 지급",
+          "근로자 사망 시 유족에게 연금 또는 일시금 지급",
+          "요양 2년 경과 중증(1~3급) 장해 시 휴업급여 대신 지급",
+          "근로자 사망 시 평균 임금의 120일분 지급",
+          "장해자 직업훈련 비용 및 훈련 수당 지급"
+        ],
+        rows: [
+          {
+            category: "요양급여",
+            description: "치료 및 수술에 필요한 병원비 보상",
+            answers: ["3일 초과 치료비 및 간병료 지급"]
+          },
+          {
+            category: "휴업급여",
+            description: "요양 기간 중 생계 안정을 위한 임금 보전",
+            answers: ["취업 불가 기간 평균 임금의 70% 지급"]
+          },
+          {
+            category: "장해급여",
+            description: "신체에 영구적 장해가 남은 경우의 보상",
+            answers: ["치유 후 신체 장해 시 제1급~14급별 지급"]
+          },
+          {
+            category: "유족급여 및 장례비",
+            description: "사망한 근로자의 가족 보호 및 장례 비용",
+            answers: ["근로자 사망 시 유족에게 연금 또는 일시금 지급", "근로자 사망 시 평균 임금의 120일분 지급"]
+          },
+          {
+            category: "상병보상연금 및 직업재활급여",
+            description: "장기 요양자 지원 및 직장 복귀 지원",
+            answers: ["요양 2년 경과 중증(1~3급) 장해 시 휴업급여 대신 지급", "장해자 직업훈련 비용 및 훈련 수당 지급"]
+          }
+        ]
+      }
+    ]
+  },
+  "success_19": {
+    title: "19강 협력적인 노사 관계",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 노사 관계의 4대 원칙 및 양면성",
+        headers: ["구분", "핵심 내용 및 운영 원리"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='노사 대등의 원칙'>",
+            content: "노사 양측은 서로의 체제를 인정하고, 경영자는 단체 교섭을 진지하게 받아들이며 대등한 입장에서 공동 결정함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='상호 불개입의 원칙'>",
+            content: "노동조합과 사용자는 각각 독립된 존재이며, 어떠한 경우에도 상대방의 조직이나 운영에 간섭하거나 지배·개입할 수 없음."
+          },
+          {
+            category: "<input class='blank-input' data-ans='노사 자치의 원칙'>",
+            content: "자유로운 단체 교섭을 통해 자치 규범인 단체 협약을 자주적으로 체결하고 스스로 질서를 형성함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='상호 이해의 원칙'>",
+            content: "대립과 갈등을 지양하고 상호 존중과 신뢰를 바탕으로 생산성 향상과 고용 안정을 위해 협력함."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 노동조합 결격 사유 및 사용자의 부당 노동 행위",
+        headers: ["구분", "법적 금지 사항 및 유형"],
+        rows: [
+          {
+            category: "노조 결격 사유",
+            content: "사용자 또는 항상 사용자 이익을 대표하는 자의 참가를 허용하는 경우, 경비의 주된 부분을 <input class='blank-input' data-ans='사용자로부터 원조|사용자 원조'>받는 경우, 공제·수양 등 복리사업만을 목적으로 하는 경우, 주로 <input class='blank-input' data-ans='정치 운동|정치운동'>을 목적으로 하는 경우, 근로자가 아닌 자의 가입을 허용하는 경우는 노동조합으로 인정되지 않음."
+          },
+          {
+            category: "부당 노동 행위",
+            content: "노조 가입·활동을 이유로 해고 등 불이익을 주는 불이익 취급, 특정 노조에 가입하지 않거나 탈퇴할 것을 고용 조건으로 하는 <input class='blank-input' data-ans='황견계약|비열계약'>, 정당한 이유 없는 <input class='blank-input' data-ans='단체 교섭 거부·해태|단체교섭 거부'>, 노조 설립·운영에 지배·개입하거나 운영비를 원조하는 행위"
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "3. 노동위원회 및 노동쟁의 조정 절차",
+        headers: ["구분", "성격, 기관 및 기간"],
+        rows: [
+          {
+            category: "노동위원회 구성",
+            content: "근로자 위원, 사용자 위원, <input class='blank-input' data-ans='공익 위원|공익위원'>의 3자 동수로 구성된 준사법적 행정 관청으로 노동쟁의 조정 및 부당해고·부당노동행위 판정을 수행함."
+          },
+          {
+            category: "조정(Mediation)",
+            content: "조정위원회가 조정안을 제시하고 수락을 권고하는 방법으로 법적 구속력이 없음. 처리 기간은 일반 사업 <input class='blank-input' data-ans='10일'>, 공익사업 <input class='blank-input' data-ans='15일'> 이내임."
+          },
+          {
+            category: "중재(Arbitration)",
+            content: "분쟁 당사자 쌍방 또는 단체협약에 의한 일방의 신청으로 진행되며 중재위원회의 판정(중재재정)은 <input class='blank-input' data-ans='법적 구속력|구속력'>을 가짐(단체협약과 동일한 효력)."
+          },
+          {
+            category: "긴급 조정",
+            content: "국민 경제를 위태롭게 할 위험이 있을 때 <input class='blank-input' data-ans='고용노동부 장관|고용노동부장관'>이 중앙노동위원회 위원장의 의견을 들어 결정하며, 공표일로부터 <input class='blank-input' data-ans='30일간'> 쟁의 행위가 전면 금지됨."
+          }
+        ]
+      },
+      {
+        type: "box",
+        caption: "4. 노사협의회와 노동조합의 핵심 차이점 비교",
+        headers: ["비교 항목", "해당 기구의 특성을 끌어다 넣으세요"],
+        words: [
+          "근로자 참여 및 협력 증진에 관한 법률",
+          "노동조합 및 노동관계조정법",
+          "사업장 소속 모든 근로자 대표",
+          "노동조합에 가입한 조합원 대표",
+          "상시 30인 이상 사업장 의무 설치",
+          "근로자 2인 이상 자유 설립",
+          "단체 교섭권 및 단체 행동권 없음",
+          "단체 교섭권 및 파업 등 쟁의권 보유",
+          "3개월마다 정기 회의 개최",
+          "매년 1회 이상 총회 개최",
+          "노측 의견을 경영에 참조·반영",
+          "법적 구속력 있는 단체 협약 체결"
+        ],
+        rows: [
+          {
+            category: "노사협의회 (참여와 협력 기구)",
+            description: "공동 이익 증진 및 생산성 향상을 위한 상설 협의 기구",
+            answers: [
+              "근로자 참여 및 협력 증진에 관한 법률",
+              "사업장 소속 모든 근로자 대표",
+              "상시 30인 이상 사업장 의무 설치",
+              "단체 교섭권 및 단체 행동권 없음",
+              "3개월마다 정기 회의 개최",
+              "노측 의견을 경영에 참조·반영"
+            ]
+          },
+          {
+            category: "노동조합 (자주적 단결체)",
+            description: "근로 조건 유지·개선 및 지위 향상을 위한 권익 대변 단체",
+            answers: [
+              "노동조합 및 노동관계조정법",
+              "노동조합에 가입한 조합원 대표",
+              "근로자 2인 이상 자유 설립",
+              "단체 교섭권 및 파업 등 쟁의권 보유",
+              "매년 1회 이상 총회 개최",
+              "법적 구속력 있는 단체 협약 체결"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "success_20": {
+    title: "20강 사회 문제와 직업 윤리 및 미래 사회와 직업 사회",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 직업 윤리의 덕목 및 일반 윤리의 구분",
+        headers: ["덕목 및 윤리", "주요 의미 및 태도"],
+        rows: [
+          {
+            category: "소명 의식 & 천직 의식",
+            content: "자신이 맡은 일을 하늘의 부름을 받아 맡겨진 고귀한 일이라 여기는 태도는 <input class='blank-input' data-ans='소명 의식|소명의식'>, 자신의 적성과 능력에 꼭 맞는 일이라 여겨 열성을 다하는 태도는 <input class='blank-input' data-ans='천직 의식|천직의식'>"
+          },
+          {
+            category: "직분 의식 & 장인 정신",
+            content: "자신의 일이 사회와 기업 발전에 중요한 역할이라 믿는 태도는 <input class='blank-input' data-ans='직분 의식|직분의식'>, 한 분야 최고의 기술을 연마하며 끝까지 책임을 다하는 태도는 <input class='blank-input' data-ans='장인 정신|장인정신'>"
+          },
+          {
+            category: "근로 윤리와 공동체 윤리",
+            content: "일 자체에 대한 존중을 바탕으로 하는 기능적 차원의 윤리는 <input class='blank-input' data-ans='근로 윤리'>(근면, 성실, 정직), 인간 사회에 대한 존중을 바탕으로 하는 사회적 차원의 윤리는 <input class='blank-input' data-ans='공동체 윤리'>(봉사, 책임, 준법, 예절)"
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 직업 윤리의 5대 원칙",
+        headers: ["5대 원칙", "원칙별 핵심 실천 지침"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='객관성의 원칙'>",
+            content: "업무의 공공성을 바탕으로 공사를 명확하게 구분하고 모든 업무를 숨김없이 투명하게 처리함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='고객 중심의 원칙'>",
+            content: "고객에 대한 봉사를 최우선으로 생각하며 현장 중심, 실천 중심으로 고객 만족을 추구함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='전문성의 원칙'>",
+            content: "전문가로서의 지식과 사명감을 가지고 책임을 완수하며 끊임없이 능력을 연마하고 계발함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='정직과 신용의 원칙'>",
+            content: "업무와 관련된 모든 약속을 성실히 이행하며 거짓 없이 정직하게 수행하여 신뢰 관계를 유지함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='공정 경쟁의 원칙'>",
+            content: "법규와 규정을 철저히 준수하고 자유 경쟁의 원리에 따라 정당하고 공정하게 행동함."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "3. 미래 사회의 특징 및 직업 사회의 변화",
+        headers: ["구분", "주요 사회적 변화 및 전망"],
+        rows: [
+          {
+            category: "미래 사회 5대 특징",
+            content: "창의적 지식 근로자가 핵심이 되는 <input class='blank-input' data-ans='지식 노동자의 증가|지식 노동자 증가'>, ICT와 초연결망 중심의 정보화 가속화, 전 세계적 교류가 확대되는 세계화, 다양성과 개성을 중시하는 <input class='blank-input' data-ans='다원주의의 심화|다원주의'>, 친환경 에너지와 지속가능 개발을 추구하는 <input class='blank-input' data-ans='녹색 성장'>"
+          },
+          {
+            category: "직업관의 변화",
+            content: "평생직장과 정년 보장의 개념이 약화되고 자신만의 직무 전문성을 기반으로 한 <input class='blank-input' data-ans='평생 직업|평생직업'> 중심 사회로 전환됨."
+          }
+        ]
+      },
+      {
+        type: "box",
+        caption: "4. 미래 직업 생활의 새로운 근무 형태 및 인재 유형 분류",
+        headers: ["새로운 직업 형태", "해당하는 설명 문구를 끌어다 넣으세요"],
+        words: [
+          "원격지에서 IT 기기를 활용하여 자택이나 스마트워크센터에서 일하는 방식",
+          "유목민처럼 국경을 넘나들며 전 세계 여러 직장과 지역을 유랑하는 직업인",
+          "특정 회사에 전속되지 않고 프로젝트별 계약으로 독립적인 성과 보수를 받는 전문 인력",
+          "온실가스 감축, 신재생 에너지, 환경 복원에 기여하는 촉망받는 직업군",
+          "증강현실, 인공지능, 빅데이터, 생체 인식 기술 등을 다루는 유망 직업군"
+        ],
+        rows: [
+          {
+            category: "원격 근무 (Remote Work)",
+            description: "공간적 제약을 극복하고 시공간이 유연하게 통합되는 업무 방식",
+            answers: ["원격지에서 IT 기기를 활용하여 자택이나 스마트워크센터에서 일하는 방식"]
+          },
+          {
+            category: "잡 노마드 (Job Nomad)",
+            description: "글로벌 유목민형 직업인",
+            answers: ["유목민처럼 국경을 넘나들며 전 세계 여러 직장과 지역을 유랑하는 직업인"]
+          },
+          {
+            category: "프리 에이전트 (Free Agent)",
+            description: "프로젝트 팀 중심의 자유 전문 계약자",
+            answers: ["특정 회사에 전속되지 않고 프로젝트별 계약으로 독립적인 성과 보수를 받는 전문 인력"]
+          },
+          {
+            category: "녹색 직업 및 첨단 IT 직업",
+            description: "지속가능 발전과 4차 산업혁명을 주도하는 신직업군",
+            answers: [
+              "온실가스 감축, 신재생 에너지, 환경 복원에 기여하는 촉망받는 직업군",
+              "증강현실, 인공지능, 빅데이터, 생체 인식 기술 등을 다루는 유망 직업군"
+            ]
+          }
+        ]
+      }
+    ]
   }
 };
 
