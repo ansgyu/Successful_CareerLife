@@ -1034,7 +1034,7 @@ const lectureDatabase = {
         headers: ["창업 방법", "장점 및 주요 특징"],
         rows: [
           {
-            category: "<input class='blank-input' data-ans='신규 기업|신규기업 창업|신규 기업'>창업",
+            category: "<input class='blank-input' data-ans='신규기업|신규 기업'>창업",
             content: "자신의 독창적 아이디어로 회사를 설립하여 <input class='blank-input' data-ans='많은 자율권|자율권'>이 보장되나, 초기 유통망 확보가 어렵고 실패 시 위험 부담이 큼."
           },
           {
@@ -1042,7 +1042,7 @@ const lectureDatabase = {
             content: "본사의 경영 노하우와 교육 지원을 받고 일정 지역에 대한 <input class='blank-input' data-ans='독점 판매권|독점판매권'>을 얻으나, 가맹비 등의 비용이 들고 자율적 결정이 어려움."
           },
           {
-            category: "<input class='blank-input' data-ans='기존 사업체 인수 창업|사업체 인수 창업|기존 사업체 인수'>",
+            category: "<input class='blank-input' data-ans='기존 사업체 인수|사업체 인수|기존 사업체인수|기존사입체인수|기존사업체 인수|사업체인수'>창업",
             content: "기존의 설비, 유통망, 고객을 그대로 활용할 수 있어 가장 편리하고 빠르나, 기존 기업의 단점이나 잠재 부실도 함께 인수할 위험이 있음."
           }
         ]
@@ -1080,15 +1080,15 @@ const lectureDatabase = {
             content: "1단계: 창업 예비 분석 → 2단계: 비전·목표 설정 → 3단계: 분야 결정 및 아이템 모색 → 4단계: <input class='blank-input' data-ans='사업 타당성 분석|사업타당성 분석|사업타당성분석'> → 5단계: 인적·물적 자원 조달 및 구성 → 6단계: <input class='blank-input' data-ans='사업 계획서 작성|사업계획서 작성|사업계획서작성'> → 7단계: 사업 개시 (개시일로부터 <input class='blank-input' data-ans='20일|20일 이내'> 이내 사업자 등록 신청)"
           },
           {
-            category: "사업 타당성: <input class='blank-input' data-ans='시장성 분석|시장성분석'>",
+            category: "사업 타당성: <input class='blank-input' data-ans='시장성'> 분석",
             content: "아이템의 상품성, 경쟁력, 시장 규모, 수요 예측 등 '시장에서 얼마나 잘 팔릴 것인가'를 검토함."
           },
           {
-            category: "사업 타당성: <input class='blank-input' data-ans='기술성 분석|기술성분석'>",
+            category: "사업 타당성: <input class='blank-input' data-ans='기술성'> 분석",
             content: "품질 수준, 생산 설비, 생산 자원, 생산 방법 및 능력 등 제품과 서비스 생산의 기술적 기반을 분석함."
           },
           {
-            category: "사업 타당성: <input class='blank-input' data-ans='경제성 분석|경제성분석'>",
+            category: "사업 타당성: <input class='blank-input' data-ans='경제성'> 분석",
             content: "<input class='blank-input' data-ans='손익 분기점|손익분기점'> 분석, 예상 수익과 비용, 투자 수익률 등 '얼마나 이익을 창출할 수 있는가'를 평가함."
           }
         ]
