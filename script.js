@@ -1312,10 +1312,6 @@ const lectureDatabase = {
             content: "50세 미만은 근속 기간에 따라 120일~<input class='blank-input' data-ans='240일'>, 50세 이상 및 장애인은 120일~<input class='blank-input' data-ans='270일'> 범위에서 지급됨(자영업자는 120~210일)."
           },
           {
-            category: "취업 촉진 수당 4종",
-            content: "소정급여일수의 절반 이상을 남기고 조기 취업 시 지급하는 <input class='blank-input' data-ans='조기 재취업 수당|조기재취업수당'>, 직업훈련 수강 시 <input class='blank-input' data-ans='직업 능력 개발 수당|직업능력개발수당'>, 원거리 구직 활동비인 광역 구직 활동비, 주거 이전 비용인 이주비가 있음."
-          },
-          {
             category: "자영업자 실업급여 특례",
             content: "자영업자 피보험자의 경우 구직급여와 취업촉진수당은 지급되지만, 연장급여와 <input class='blank-input' data-ans='조기 재취업 수당|조기재취업수당'>은 제외됨."
           }
@@ -1369,7 +1365,41 @@ const lectureDatabase = {
       },
       {
         type: "blank",
-        caption: "5. 고용보험 가입 및 실업급여 수급 절차",
+        caption: "5. 수급 자격 인정 정당한 이직 사유 (이직 전 1년 내 2개월 이상 발생)",
+        headers: ["구분", "세부 불리한 근로 조건 기준"],
+        rows: [
+          {
+            category: "조건 저하 및 체불",
+            content: "실제 근로 조건이 채용 시 제시된 조건보다 낮아진 경우, <input class='blank-input' data-ans='임금 체불|임금체불'>이 발생한 경우, 소정근로 임금이 <input class='blank-input' data-ans='최저임금'>에 미달한 경우"
+          },
+          {
+            category: "시간 초과 및 휴업",
+            content: "근로기준법상 연장 근로의 제한을 위반한 경우, 사업장 휴업으로 휴업 전 평균 임금의 <input class='blank-input' data-ans='70% 미만'>을 지급받은 경우, 사업의 양도·인수·합병 또는 폐업 권고를 받은 경우"
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "6. 모성 보호 제도 (육아휴직·출산전후휴가·근로시간 단축)",
+        headers: ["제도명", "주요 요건 및 보장 내용"],
+        rows: [
+          {
+            category: "육아휴직",
+            content: "만 <input class='blank-input' data-ans='8세 이하'> 또는 초등학교 2학년 이하의 자녀 양육을 위해 신청하며 기간은 자녀 1명당 최대 1년(부모 모두 3개월 이상 사용 등 요건 충족 시 최대 <input class='blank-input' data-ans='6개월'> 추가 연장 가능). 피보험 단위 기간 180일 이상 충족 시 육아휴직 급여 지급."
+          },
+          {
+            category: "출산전후휴가",
+            content: "임신 중인 여성 근로자에게 출산 전후를 합하여 <input class='blank-input' data-ans='90일'>(다태아 120일)의 유급 휴가를 부여하며, 출산 후 휴가 기간이 반드시 <input class='blank-input' data-ans='45일'>(다태아 60일) 이상 확보되어야 함."
+          },
+          {
+            category: "육아기 근로시간 단축",
+            content: "만 8세 이하 자녀 양육을 위해 주당 근로 시간을 <input class='blank-input' data-ans='15시간 이상 35시간 이하|15~35시간'>로 단축하여 근무할 수 있는 제도임."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "7. 고용보험 가입 및 실업급여 수급 절차",
         headers: ["단계 및 절차", "신고 기한 및 행정 절차"],
         rows: [
           {
@@ -1501,27 +1531,22 @@ const lectureDatabase = {
         rows: [
           {
             category: "요양급여",
-            description: "치료 및 수술에 필요한 병원비 보상",
             answers: ["3일 초과 치료비 및 간병료 지급"]
           },
           {
             category: "휴업급여",
-            description: "요양 기간 중 생계 안정을 위한 임금 보전",
             answers: ["취업 불가 기간 평균 임금의 70% 지급"]
           },
           {
             category: "장해급여",
-            description: "신체에 영구적 장해가 남은 경우의 보상",
             answers: ["치유 후 신체 장해 시 제1급~14급별 지급"]
           },
           {
             category: "유족급여 및 장례비",
-            description: "사망한 근로자의 가족 보호 및 장례 비용",
             answers: ["근로자 사망 시 유족에게 연금 또는 일시금 지급", "근로자 사망 시 평균 임금의 120일분 지급"]
           },
           {
             category: "상병보상연금 및 직업재활급여",
-            description: "장기 요양자 지원 및 직장 복귀 지원",
             answers: ["요양 2년 경과 중증(1~3급) 장해 시 휴업급여 대신 지급", "장해자 직업훈련 비용 및 훈련 수당 지급"]
           }
         ]
@@ -1580,11 +1605,11 @@ const lectureDatabase = {
             content: "근로자 위원, 사용자 위원, <input class='blank-input' data-ans='공익 위원|공익위원'>의 3자 동수로 구성된 준사법적 행정 관청으로 노동쟁의 조정 및 부당해고·부당노동행위 판정을 수행함."
           },
           {
-            category: "조정(Mediation)",
+            category: "조정",
             content: "조정위원회가 조정안을 제시하고 수락을 권고하는 방법으로 법적 구속력이 없음. 처리 기간은 일반 사업 <input class='blank-input' data-ans='10일'>, 공익사업 <input class='blank-input' data-ans='15일'> 이내임."
           },
           {
-            category: "중재(Arbitration)",
+            category: "중재",
             content: "분쟁 당사자 쌍방 또는 단체협약에 의한 일방의 신청으로 진행되며 중재위원회의 판정(중재재정)은 <input class='blank-input' data-ans='법적 구속력|구속력'>을 가짐(단체협약과 동일한 효력)."
           },
           {
@@ -1613,8 +1638,7 @@ const lectureDatabase = {
         ],
         rows: [
           {
-            category: "노사협의회 (참여와 협력 기구)",
-            description: "공동 이익 증진 및 생산성 향상을 위한 상설 협의 기구",
+            category: "노사협의회",
             answers: [
               "근로자 참여 및 협력 증진에 관한 법률",
               "사업장 소속 모든 근로자 대표",
@@ -1625,8 +1649,7 @@ const lectureDatabase = {
             ]
           },
           {
-            category: "노동조합 (자주적 단결체)",
-            description: "근로 조건 유지·개선 및 지위 향상을 위한 권익 대변 단체",
+            category: "노동조합",
             answers: [
               "노동조합 및 노동관계조정법",
               "노동조합에 가입한 조합원 대표",
@@ -1719,22 +1742,18 @@ const lectureDatabase = {
         rows: [
           {
             category: "원격 근무 (Remote Work)",
-            description: "공간적 제약을 극복하고 시공간이 유연하게 통합되는 업무 방식",
             answers: ["원격지에서 IT 기기를 활용하여 자택이나 스마트워크센터에서 일하는 방식"]
           },
           {
             category: "잡 노마드 (Job Nomad)",
-            description: "글로벌 유목민형 직업인",
             answers: ["유목민처럼 국경을 넘나들며 전 세계 여러 직장과 지역을 유랑하는 직업인"]
           },
           {
             category: "프리 에이전트 (Free Agent)",
-            description: "프로젝트 팀 중심의 자유 전문 계약자",
             answers: ["특정 회사에 전속되지 않고 프로젝트별 계약으로 독립적인 성과 보수를 받는 전문 인력"]
           },
           {
             category: "녹색 직업 및 첨단 IT 직업",
-            description: "지속가능 발전과 4차 산업혁명을 주도하는 신직업군",
             answers: [
               "온실가스 감축, 신재생 에너지, 환경 복원에 기여하는 촉망받는 직업군",
               "증강현실, 인공지능, 빅데이터, 생체 인식 기술 등을 다루는 유망 직업군"
