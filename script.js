@@ -1286,7 +1286,7 @@ const lectureDatabase = {
         rows: [
           {
             category: "실업 급여 요율",
-            content: "근로자와 사업주가 각각 <input class='blank-input' data-ans='0.9%|0.9 퍼센트'>씩 균등하게 부담함(총 1.8%)."
+            content: "근로자와 사업주가 각각 <input class='blank-input' data-ans='0.9%|0.9 퍼센트'>씩 균등하게 부담함."
           },
           {
             category: "고용안정·직능사업 요율",
@@ -1323,35 +1323,47 @@ const lectureDatabase = {
       },
       {
         type: "blank",
-        caption: "3. 수급 자격 인정 정당한 이직 사유 (이직 전 1년 내 2개월 이상 발생)",
-        headers: ["구분", "세부 불리한 근로 조건 기준"],
+        caption: "3. 구직급여의 연장급여 및 상병급여",
+        headers: ["급여 종류", "지급 요건 및 지원 내용"],
         rows: [
           {
-            category: "조건 저하 및 체불",
-            content: "실제 근로 조건이 채용 시 제시된 조건보다 낮아진 경우, <input class='blank-input' data-ans='임금 체불|임금체불'>이 발생한 경우, 소정근로 임금이 <input class='blank-input' data-ans='최저임금'>에 미달한 경우"
+            category: "<input class='blank-input' data-ans='훈련연장급여|훈련 연장 급여'>",
+            content: "직업안정기관의 장이 재취업을 위해 <input class='blank-input' data-ans='직업능력개발훈련|직업 능력 개발 훈련'>을 받도록 지시한 경우, 훈련 기간 중 실업 인정을 받은 날에 대해 소정급여일수를 초과하여 지급함(훈련 기간 중 직업능력개발수당도 병급 지급)."
           },
           {
-            category: "시간 초과 및 휴업",
-            content: "근로기준법상 연장 근로의 제한을 위반한 경우, 사업장 휴업으로 휴업 전 평균 임금의 <input class='blank-input' data-ans='70% 미만'>을 지급받은 경우, 사업의 양도·인수·합병 또는 폐업 권고를 받은 경우"
+            category: "<input class='blank-input' data-ans='개별연장급여|개별 연장 급여'>",
+            content: "직업안정기관의 장이 <input class='blank-input' data-ans='취업이 특히 곤란|취업이 곤란'>하고 생활이 어려운 수급자격자에 대해 소정급여일수를 초과하여 연장 지급함(구직급여액의 <input class='blank-input' data-ans='70%|70 퍼센트'>만 지급)."
+          },
+          {
+            category: "<input class='blank-input' data-ans='특별연장급여|특별 연장 급여'>",
+            content: "<input class='blank-input' data-ans='고용노동부장관|고용노동부 장관'>이 실업의 급증 등 특별한 사유가 발생한 경우 <input class='blank-input' data-ans='60일'>의 범위에서 소정급여일수를 초과하여 연장 지급함(구직급여액의 70%만 지급)."
+          },
+          {
+            category: "<input class='blank-input' data-ans='상병급여|상병 급여'>",
+            content: "실업 신고를 한 이후에 <input class='blank-input' data-ans='질병|부상|출산'>으로 취업이 불가능하여 실업의 인정을 받지 못한 날에 대해 구직급여에 갈음하여 구직급여일액 상당액을 지급함."
           }
         ]
       },
       {
         type: "blank",
-        caption: "4. 모성 보호 제도 (육아휴직·출산전후휴가·근로시간 단축)",
-        headers: ["제도명", "주요 요건 및 보장 내용"],
+        caption: "4. 취업촉진수당의 종류 및 지급 요건",
+        headers: ["수당 종류", "지급 대상 및 요건"],
         rows: [
           {
-            category: "육아휴직",
-            content: "만 <input class='blank-input' data-ans='8세 이하'> 또는 초등학교 2학년 이하의 자녀 양육을 위해 신청하며 기간은 자녀 1명당 최대 1년(부모 모두 3개월 이상 사용 등 요건 충족 시 최대 <input class='blank-input' data-ans='6개월'> 추가 연장 가능). 피보험 단위 기간 180일 이상 충족 시 육아휴직 급여 지급."
+            category: "<input class='blank-input' data-ans='조기재취업수당|조기 재취업 수당'>",
+            content: "수급자격자(외국인 근로자 제외)가 안정된 직업에 재취업하거나 스스로 <input class='blank-input' data-ans='영리|영리를 목적'>으로 하는 사업을 영위하는 경우 지급함."
           },
           {
-            category: "출산전후휴가",
-            content: "임신 중인 여성 근로자에게 출산 전후를 합하여 <input class='blank-input' data-ans='90일'>(다태아 120일)의 유급 휴가를 부여하며, 출산 후 휴가 기간이 반드시 <input class='blank-input' data-ans='45일'>(다태아 60일) 이상 확보되어야 함."
+            category: "<input class='blank-input' data-ans='직업능력개발수당|직업 능력 개발 수당'>",
+            content: "수급자격자가 직업안정기관의 장이 지시한 <input class='blank-input' data-ans='직업능력개발훈련|직업 능력 개발 훈련'> 등을 받는 경우, 그 훈련을 받는 기간에 대하여 지급함."
           },
           {
-            category: "육아기 근로시간 단축",
-            content: "만 8세 이하 자녀 양육을 위해 주당 근로 시간을 <input class='blank-input' data-ans='15시간 이상 35시간 이하|15~35시간'>로 단축하여 근무할 수 있는 제도임."
+            category: "<input class='blank-input' data-ans='광역구직활동비|광역 구직 활동비'>",
+            content: "수급자격자가 직업안정기관의 소개에 따라 <input class='blank-input' data-ans='광범위한 지역|광범위한'>에 걸쳐 원거리 구직 활동을 하는 경우 운임 및 숙박비 등을 지급함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='이주비'>",
+            content: "수급자격자가 취업하거나 직업안정기관의 장이 지시한 직업능력개발훈련을 받기 위하여 <input class='blank-input' data-ans='주거를 이전|주거 이전|이사'>하는 경우 지급함."
           }
         ]
       },
