@@ -843,6 +843,257 @@ const lectureDatabase = {
         ]
       }
     ]
+  },
+  "success_11": {
+    title: "11강 경력 개발과 평생 학습의 의미",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 주요 평생 학습 제도 (학위 및 학습 관리)",
+        headers: ["평생 학습 제도", "주관 기관, 근거 법률 및 상세 운영 내용"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='독학학위제|독학 학위제'>",
+            content: "<input class='blank-input' data-ans='국가평생교육진흥원'>에서 주관하며, 국가시험을 통해 대학 학사 학위를 취득할 수 있는 제도임. 매년 1~4과정까지 총 <input class='blank-input' data-ans='4번|4회'>의 시험이 진행되며, 모든 과정을 통과하면 <input class='blank-input' data-ans='교육부 장관|교육부장관'>이 수여하는 학사 학위를 취득함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='학점은행제|학점 은행제'>",
+            content: "「학점인정 등에 관한 법률」에 의거하여 학교 안팎의 다양한 학습 및 자격을 학점으로 인정받아 일정 기준을 충족하면 학위를 취득함. 취득 학위는 법적으로 정규 대학 졸업자와 동등한 학력을 인정받으며, 매년 <input class='blank-input' data-ans='2월과 8월|2월, 8월|2월 및 8월'>에 학위를 수여함. (사회복지사 2급, 평생교육사 등 취득 연계 가능)"
+          },
+          {
+            category: "<input class='blank-input' data-ans='평생학습계좌제|평생 학습 계좌제'>",
+            content: "「<input class='blank-input' data-ans='평생교육법'>」 제23조에 따라 국민의 다양한 학습 경험을 온라인 학습 계좌에 누적·관리하고, 이를 학력·자격 인정과 연계하거나 고용 정보로 활용하는 제도임. 체계적인 e-포트폴리오 생성 및 <input class='blank-input' data-ans='평생 학습 이력 증명서|평생학습 이력 증명서|평생학습이력증명서'> 발급이 가능함."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 주요 평생 학습 제도 (일·학습 및 고등 교육 연계)",
+        headers: ["평생 학습 제도", "상세 운영 기준 및 핵심 특징"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='일학습 병행제|일학습병행제|일·학습 병행제'>",
+            content: "국가직무능력표준(NCS) 기반으로 기업이 근로자를 채용하여 현장 훈련(<input class='blank-input' data-ans='OJT'>)과 사업장 외 훈련(<input class='blank-input' data-ans='OFF-JT|Off-JT'>)을 병행하는 일터 기반 제도임. 참여 유형은 재학생 단계(<input class='blank-input' data-ans='산학 일체형 도제 학교|산학일체형 도제학교|산학 일체형 도제학교'>, 전문대, IPP형 4년제)와 재직자 단계(단독 기업형 50인 이상, 공동 훈련 센터형 20인 이상, P-Tech)로 구분됨."
+          },
+          {
+            category: "<input class='blank-input' data-ans='계약학과'>",
+            content: "대학이 국가·지자체·산업체와 협약을 맺고 운영하는 학과임. 졸업생 채용을 조건으로 학자금 지원 계약을 체결하는 <input class='blank-input' data-ans='채용 조건형|채용조건형'>과 소속 직원의 직무 능력 향상을 위해 교육을 의뢰하는 <input class='blank-input' data-ans='재교육형'>으로 나뉨. 산업체 부담금은 교육 필요 경비의 <input class='blank-input' data-ans='50%|50% 이상'> 이상임."
+          },
+          {
+            category: "<input class='blank-input' data-ans='사내대학|사내 대학'>",
+            content: "상법 또는 특별법에 따른 사업장(종업원 <input class='blank-input' data-ans='200명|200인'> 이상)의 경영자가 대학에 진학하지 못한 근로자를 위해 설치·운영하는 평생교육 시설로, 전문대학 또는 대학 졸업자와 동등한 학위가 인정됨."
+          },
+          {
+            category: "<input class='blank-input' data-ans='K-MOOC|한국형 온라인 공개강좌|케이무크'>",
+            content: "교육부와 국가평생교육진흥원이 주관하는 웹 기반 무료 온라인 공개강좌 서비스로, 질의응답, 토론, 퀴즈, 과제 제출 등 <input class='blank-input' data-ans='양방향 학습|양방향'>을 지원함."
+          }
+        ]
+      }
+    ]
+  },
+  "success_12": {
+    title: "12강 취업과 창업 및 기업가 정신 (1)",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "box",
+        caption: "1. 하렌(Harren)의 진로 의사 결정 유형",
+        headers: ["의사 결정 유형", "해당 유형의 특징 및 성향을 끌어다 넣으세요"],
+        words: [
+          "정보를 충분히 수집·분석하여 신중하게 결정",
+          "자신의 선택에 책임을 지며 미래 상황까지 예측",
+          "실패 확률이 낮으나 많은 시간이 소요됨",
+          "순간적인 느낌이나 직관, 상상력으로 결정",
+          "결정에 대한 책임을 자신이 짐",
+          "빠르고 창의적이나 장기적인 일에는 부적합",
+          "타인의 의견에 기초하여 수동적으로 결정",
+          "실패했을 때 책임을 회피하고 남 탓을 하기 쉬움",
+          "소신이 없거나 잘 모르는 문제 결정 시 적합"
+        ],
+        rows: [
+          {
+            category: "합리적 유형",
+            answers: [
+              "정보를 충분히 수집·분석하여 신중하게 결정",
+              "자신의 선택에 책임을 지며 미래 상황까지 예측",
+              "실패 확률이 낮으나 많은 시간이 소요됨"
+            ]
+          },
+          {
+            category: "직관적 유형",
+            answers: [
+              "순간적인 느낌이나 직관, 상상력으로 결정",
+              "결정에 대한 책임을 자신이 짐",
+              "빠르고 창의적이나 장기적인 일에는 부적합"
+            ]
+          },
+          {
+            category: "의존적 유형",
+            answers: [
+              "타인의 의견에 기초하여 수동적으로 결정",
+              "실패했을 때 책임을 회피하고 남 탓을 하기 쉬움",
+              "소신이 없거나 잘 모르는 문제 결정 시 적합"
+            ]
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 기업 취업 계획의 수립 절차와 방법",
+        headers: ["수립 단계 (순서)", "주요 활동 및 세부 수행 내용"],
+        rows: [
+          {
+            category: "1단계: <input class='blank-input' data-ans='자기 분석|자기분석'>",
+            content: "자신의 흥미, 성격, 적성, 가치관을 탐색하고 강점과 약점을 파악하여 생애 목표를 수립함."
+          },
+          {
+            category: "2단계: <input class='blank-input' data-ans='직종 및 직무 선택|직종 및 직무선택|직종/직무 선택'>",
+            content: "경영 지원, 연구 개발, 생산 관리 등 NCS 직무 수행 내용을 참고하여 자신에게 맞는 분야를 선정함."
+          },
+          {
+            category: "3단계: <input class='blank-input' data-ans='업종 선택|업종선택'>",
+            content: "제조업, 서비스업, 정보 통신업 등 자신이 관심 있는 산업 분야를 선택함."
+          },
+          {
+            category: "4단계: <input class='blank-input' data-ans='기업 선택|기업선택'>",
+            content: "선택한 업종 내에서 지속 가능성이 높고 추구하는 인재상이 부합하는 기업을 20개 내외로 목록화하여 비교·선택함."
+          },
+          {
+            category: "5단계: <input class='blank-input' data-ans='기업 정보 수집|기업정보 수집|기업정보수집'>",
+            content: "선택한 기업의 채용 절차, 인재상, 경영 이념, 재무 상태, 시장 점유율 등의 정보를 다각도로 파악함."
+          },
+          {
+            category: "6단계: <input class='blank-input' data-ans='채용 전형 준비|채용전형 준비|채용전형준비'>",
+            content: "기업 맞춤형 입사 지원서와 자기소개서를 작성하고 필기시험 및 전공 지식을 학습함."
+          },
+          {
+            category: "7단계: <input class='blank-input' data-ans='실전 연습|실전연습'>",
+            content: "모의 면접 진행, 피드백 반영, 이미지 메이킹 등 실제 채용 면접에 대비한 훈련을 실시함."
+          }
+        ]
+      }
+    ]
+  },
+  "success_13": {
+    title: "13강 취업과 창업 및 기업가 정신 (2)",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 주요 면접 유형별 개념 및 평가 방식",
+        headers: ["면접 유형", "상세 진행 방식 및 핵심 평가 내용"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='경험 면접|경험면접'>",
+            content: "지원자의 과거 경험을 기반으로 직무 역량을 갖추었는지 평가하는 면접으로, <input class='blank-input' data-ans='STAR 기법|STAR기법|STAR'>에 맞춰 구체적으로 답변하는 것이 유리함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='토론 면접|토론면접'>",
+            content: "여러 명의 지원자가 특정 주제를 놓고 논의하는 과정을 평가하며, 논리적인 의견 개진과 <input class='blank-input' data-ans='경청하는 태도|타인의 의견 경청|경청'>이 주요 평가 요소임."
+          },
+          {
+            category: "<input class='blank-input' data-ans='발표 면접|프레젠테이션 면접|PT 면접'>",
+            content: "사전에 제시한 주제에 대해 발표 자료를 준비하여 면접관 앞에서 발표하게 함으로써 문제 해결 능력과 실무 발표력을 평가함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='상황 면접|상황면접'>",
+            content: "실제 업무에서 발생할 수 있는 가상의 특정 상황을 제시하고 지원자의 대처 행동이나 발언을 통해 실제 행동을 예측·평가함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='롤플레잉 면접|역할 연기 면접'>",
+            content: "특정 역할을 부여하고 <input class='blank-input' data-ans='역할 연기'>를 수행하게 함으로써 위기 대처 능력과 직무 적합성을 파악함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='블라인드 면접|블라인드면접'>",
+            content: "지원자의 학력, 출신 지역, 가족 관계, 성별 등의 편견 유발 정보를 배제한 상태에서 직무 수행 능력만을 평가함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='다차원 면접|다차원면접'>",
+            content: "면접관과 지원자가 팀을 이루어 등산, 체육 활동, 놀이공원 등을 하루 종일 함께하며 인성과 대인 관계를 자연스럽게 관찰함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='압박 면접|압박면접'>",
+            content: "지원자에게 의도된 연속 질문이나 스트레스 상황을 주어 극한 상황에서의 자제력, 순발력, 위기 대응력을 평가함."
+          },
+          {
+            category: "<input class='blank-input' data-ans='AI 면접|인공지능 면접'>",
+            content: "인공지능을 활용하여 지원자의 음성, 표정, 행동 패턴, 언어 표현 등을 종합적으로 분석하고 역량을 평가함."
+          }
+        ]
+      }
+    ]
+  },
+  "success_14": {
+    title: "14강 취업과 창업 및 기업가 정신 (3)",
+    description: "교재의 핵심 개념 표의 빈칸 채우기 및 보기 박스 단어 분류를 통해 복습하세요",
+    tables: [
+      {
+        type: "blank",
+        caption: "1. 창업의 3가지 방법 비교",
+        headers: ["창업 방법", "장점 및 주요 특징"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='신규 기업|신규기업 창업|신규 기업'>창업",
+            content: "자신의 독창적 아이디어로 회사를 설립하여 <input class='blank-input' data-ans='많은 자율권|자율권'>이 보장되나, 초기 유통망 확보가 어렵고 실패 시 위험 부담이 큼."
+          },
+          {
+            category: "<input class='blank-input' data-ans='프랜차이즈|가맹점'>창업",
+            content: "본사의 경영 노하우와 교육 지원을 받고 일정 지역에 대한 <input class='blank-input' data-ans='독점 판매권|독점판매권'>을 얻으나, 가맹비 등의 비용이 들고 자율적 결정이 어려움."
+          },
+          {
+            category: "<input class='blank-input' data-ans='기존 사업체 인수 창업|사업체 인수 창업|기존 사업체 인수'>",
+            content: "기존의 설비, 유통망, 고객을 그대로 활용할 수 있어 가장 편리하고 빠르나, 기존 기업의 단점이나 잠재 부실도 함께 인수할 위험이 있음."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "2. 창업의 4요소",
+        headers: ["구성 요소", "핵심 설명"],
+        rows: [
+          {
+            category: "<input class='blank-input' data-ans='창업자'>",
+            content: "기업을 설립하고 경영을 주도하는 사람으로 창업에서 가장 핵심적인 주체임."
+          },
+          {
+            category: "<input class='blank-input' data-ans='창업 아이템|창업아이템'>",
+            content: "수익 창출을 위해 시장에 판매할 제품이나 서비스로 상품성, 시장성 분석이 필수적임."
+          },
+          {
+            category: "<input class='blank-input' data-ans='창업 자본|창업자본'>",
+            content: "시설 자금, 운전자금, 인건비 등 창업과 초기 운영에 소요되는 모든 자금."
+          },
+          {
+            category: "<input class='blank-input' data-ans='시장'>",
+            content: "생산된 상품이나 서비스를 소비하고 판매할 수 있는 장소이자 고객의 수요 대상."
+          }
+        ]
+      },
+      {
+        type: "blank",
+        caption: "3. 점포 창업 절차 및 사업 타당성 분석",
+        headers: ["창업 절차 및 분석 항목", "세부 추진 내용"],
+        rows: [
+          {
+            category: "창업 절차 (7단계)",
+            content: "1단계: 창업 예비 분석 → 2단계: 비전·목표 설정 → 3단계: 분야 결정 및 아이템 모색 → 4단계: <input class='blank-input' data-ans='사업 타당성 분석|사업타당성 분석|사업타당성분석'> → 5단계: 인적·물적 자원 조달 및 구성 → 6단계: <input class='blank-input' data-ans='사업 계획서 작성|사업계획서 작성|사업계획서작성'> → 7단계: 사업 개시 (개시일로부터 <input class='blank-input' data-ans='20일|20일 이내'> 이내 사업자 등록 신청)"
+          },
+          {
+            category: "사업 타당성: <input class='blank-input' data-ans='시장성 분석|시장성분석'>",
+            content: "아이템의 상품성, 경쟁력, 시장 규모, 수요 예측 등 '시장에서 얼마나 잘 팔릴 것인가'를 검토함."
+          },
+          {
+            category: "사업 타당성: <input class='blank-input' data-ans='기술성 분석|기술성분석'>",
+            content: "품질 수준, 생산 설비, 생산 자원, 생산 방법 및 능력 등 제품과 서비스 생산의 기술적 기반을 분석함."
+          },
+          {
+            category: "사업 타당성: <input class='blank-input' data-ans='경제성 분석|경제성분석'>",
+            content: "<input class='blank-input' data-ans='손익 분기점|손익분기점'> 분석, 예상 수익과 비용, 투자 수익률 등 '얼마나 이익을 창출할 수 있는가'를 평가함."
+          }
+        ]
+      }
+    ]
   }
 };
 
